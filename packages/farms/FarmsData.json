@@ -1,0 +1,115 @@
+[
+    {
+        "pid": 0,
+        "lpSymbol": "MMO",
+        "lpAddress": "0x6BBA354355Fe416a716E967a0C481a907956EC3b",
+        "token": {
+            "address": "0xbC8C25e531e1F8bB7fd5A4240A8e8C11Cfad6b8e",
+            "chainId": 97,
+            "decimals": 18,
+            "symbol": "MMO",
+            "name": "MMOSwap Token",
+            "projectLink": "https://pancakeswap.finance/"
+        },
+        "isToken": true,
+        "quoteToken": {
+            "address": "0x8301F2213c0eeD49a7E28Ae4c3e91722919B8B47",
+            "chainId": 97,
+            "decimals": 18,
+            "symbol": "BUSD",
+            "name": "Binance USD",
+            "projectLink": "https://www.paxos.com/busd/"
+        },
+        "tokenAmountTotal": "1000000.0",
+        "quoteTokenAmountTotal": "1000.0",
+        "lpTotalSupply": "31622776601683793319988.0",
+        "lpTotalInQuoteToken": "0.063245553203366",
+        "tokenPriceVsQuote": "0.001",
+        "poolWeight": "0.153846153846153846",
+        "multiplier": "10X"
+    },
+    {
+        "pid": 1,
+        "lpSymbol": "BUSD-MMO LP",
+        "lpAddress": "0x6BBA354355Fe416a716E967a0C481a907956EC3b",
+        "token": {
+            "address": "0xbC8C25e531e1F8bB7fd5A4240A8e8C11Cfad6b8e",
+            "chainId": 97,
+            "decimals": 18,
+            "symbol": "MMO",
+            "name": "MMOSwap Token",
+            "projectLink": "https://pancakeswap.finance/"
+        },
+        "quoteToken": {
+            "address": "0x8301F2213c0eeD49a7E28Ae4c3e91722919B8B47",
+            "chainId": 97,
+            "decimals": 18,
+            "symbol": "BUSD",
+            "name": "Binance USD",
+            "projectLink": "https://www.paxos.com/busd/"
+        },
+        "tokenAmountTotal": "1000000.0",
+        "quoteTokenAmountTotal": "1000.0",
+        "lpTotalSupply": "31622776601683793319988.0",
+        "lpTotalInQuoteToken": "0.063245553203366",
+        "tokenPriceVsQuote": "0.001",
+        "poolWeight": "0.307692307692307692",
+        "multiplier": "20X"
+    },
+    {
+        "pid": 2,
+        "lpSymbol": "BNB-MMO LP",
+        "lpAddress": "0x07ae38447D4D8B707dD8984EEd87542437f94f9f",
+        "token": {
+            "address": "0xbC8C25e531e1F8bB7fd5A4240A8e8C11Cfad6b8e",
+            "chainId": 97,
+            "decimals": 18,
+            "symbol": "MMO",
+            "name": "MMOSwap Token",
+            "projectLink": "https://pancakeswap.finance/"
+        },
+        "quoteToken": {
+            "address": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+            "chainId": 97,
+            "decimals": 18,
+            "symbol": "WBNB",
+            "name": "Wrapped BNB",
+            "projectLink": "https://www.binance.org"
+        },
+        "tokenAmountTotal": "200000.0",
+        "quoteTokenAmountTotal": "0.6",
+        "lpTotalSupply": "346410161513775458705.0",
+        "lpTotalInQuoteToken": "0.003464101615137752",
+        "tokenPriceVsQuote": "0.000003",
+        "poolWeight": "0.461538461538461538",
+        "multiplier": "30X"
+    },
+    {
+        "pid": 3,
+        "lpSymbol": "BNB-BUSD LP",
+        "lpAddress": "0xAa9F8efCb2033d7B4Dbcd7EA54b122574565B058",
+        "token": {
+            "address": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+            "chainId": 97,
+            "decimals": 18,
+            "symbol": "WBNB",
+            "name": "Wrapped BNB",
+            "projectLink": "https://www.binance.org"
+        },
+        "quoteToken": {
+            "address": "0x8301F2213c0eeD49a7E28Ae4c3e91722919B8B47",
+            "chainId": 97,
+            "decimals": 18,
+            "symbol": "BUSD",
+            "name": "Binance USD",
+            "projectLink": "https://www.paxos.com/busd/"
+        },
+        "tokenAmountTotal": "1.093932763084827594",
+        "quoteTokenAmountTotal": "361.699931419935110872",
+        "lpTotalSupply": "19891453643713685694.0",
+        "lpTotalInQuoteToken": "36.36737041933015956",
+        "tokenPriceVsQuote": "330.641830673360644104",
+        "poolWeight": "0.076923076923076923",
+        "multiplier": "5X"
+    }
+]

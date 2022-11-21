@@ -1,0 +1,202 @@
+[
+    {
+        "tokenBalanceLP": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x0b7abc627050305adf14a3d9e40000000000",
+            "_value": "1000000000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "quoteTokenBalanceLP": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x02f050fe938943acc45f65568000000000",
+            "_value": "1000000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "lpTokenBalanceMC": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0xc097ce7bc90715b34b9f1000000000",
+            "_value": "1000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "lpTotalSupply": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x5cee553cf9b29f0183bc10092160500000",
+            "_value": "31622776601683793319988.0",
+            "_isFixedNumber": true
+        }
+    },
+    {
+        "tokenBalanceLP": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x0b7abc627050305adf14a3d9e40000000000",
+            "_value": "1000000000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "quoteTokenBalanceLP": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x02f050fe938943acc45f65568000000000",
+            "_value": "1000000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "lpTokenBalanceMC": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0xc097ce7bc90715b34b9f1000000000",
+            "_value": "1000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "lpTotalSupply": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x5cee553cf9b29f0183bc10092160500000",
+            "_value": "31622776601683793319988.0",
+            "_isFixedNumber": true
+        }
+    },
+    {
+        "tokenBalanceLP": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x024bbf46e3433cdef96a872b940000000000",
+            "_value": "200000000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "quoteTokenBalanceLP": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x738e48b0abd10d052d5f7000000000",
+            "_value": "600000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "lpTokenBalanceMC": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0xc097ce7bc90715b34b9f1000000000",
+            "_value": "1000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "lpTotalSupply": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x01049c2b996ea6095a6bf1d025d3a40000",
+            "_value": "346410161513775458705.0",
+            "_isFixedNumber": true
+        }
+    },
+    {
+        "tokenBalanceLP": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0xd2af0ca2c455733b719913e0e80000",
+            "_value": "1093932763084827594.0",
+            "_isFixedNumber": true
+        },
+        "quoteTokenBalanceLP": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x01101cdf7517ca06ad8d7b775354600000",
+            "_value": "361699931419935110872.0",
+            "_isFixedNumber": true
+        },
+        "lpTokenBalanceMC": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0xc097ce7bc90715b34b9f1000000000",
+            "_value": "1000000000000000000.0",
+            "_isFixedNumber": true
+        },
+        "lpTotalSupply": {
+            "format": {
+                "signed": true,
+                "width": 128,
+                "decimals": 18,
+                "name": "fixed128x18",
+                "_multiplier": "1000000000000000000"
+            },
+            "_hex": "0x0ef6f4620a693da7ebfdc9cddc380000",
+            "_value": "19891453643713685694.0",
+            "_isFixedNumber": true
+        }
+    }
+]
