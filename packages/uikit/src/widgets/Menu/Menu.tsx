@@ -67,6 +67,11 @@ const Inner = styled.div`
   transform: translate3d(0, 0, 0);
   max-width: 100%;
 `;
+const LogoPricebutton = styled.div`
+  box-shadow: 0px -1px 2px #1be0aa;
+  padding: 8px;
+  border-radius: 100px;
+`;
 
 const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
   linkComponent = "a",
@@ -145,15 +150,19 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
             <StyledNav>
               <Flex>
                 <Logo href={homeLink?.href ?? "/"} />
+              </Flex>
+              <Flex>
                 <AtomBox display={{ xs: "none", md: "block" }}>
                   <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />
                 </AtomBox>
               </Flex>
               <Flex alignItems="center" height="100%">
                 <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
-                  <CakePrice showSkeleton={false} cakePriceUsd={cakePriceUsd} />
+                  <LogoPricebutton>
+                    <CakePrice showSkeleton={true} cakePriceUsd={cakePriceUsd} />
+                  </LogoPricebutton>
                 </AtomBox>
-                <Box mt="4px">
+                {/* <Box mt="4px">
                   <LangSelector
                     currentLang={currentLang}
                     langs={langs}
@@ -162,7 +171,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                     color="textSubtle"
                     hideLanguage
                   />
-                </Box>
+                </Box> */}
                 {rightSide}
               </Flex>
             </StyledNav>

@@ -2,7 +2,7 @@ import { scales, variants } from "./types";
 
 export const scaleVariants = {
   [scales.MD]: {
-    height: "48px",
+    height: "38px",
     padding: "0 24px",
   },
   [scales.SM]: {
