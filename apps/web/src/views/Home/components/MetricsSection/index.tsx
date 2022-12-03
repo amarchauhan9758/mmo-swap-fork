@@ -1,4 +1,4 @@
-import { Heading, Flex, Text, Skeleton, ChartIcon, CommunityIcon, SwapIcon } from '@pancakeswap/uikit'
+import { Heading, Flex, Text, Skeleton, ChartIcon, CommunityIcon, SwapIcon, Box } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import { formatLocalisedCompactNumber } from '@pancakeswap/utils/formatBalance'
@@ -34,30 +34,33 @@ const Stats = () => {
   }
 
   return (
-    <Flex justifyContent="center" alignItems="center" flexDirection="column">
-      <GradientLogo height="48px" width="48px" mb="24px" />
-      <Heading textAlign="center" scale="xl">
-        {t('Used by millions.')}
-      </Heading>
-      <Heading textAlign="center" scale="xl" mb="32px">
-        {t('Trusted with billions.')}
-      </Heading>
-      <Text textAlign="center" color="textSubtle">
-        {t('PancakeSwap has the most users of any decentralized platform, ever.')}
-      </Text>
-      <Flex flexWrap="wrap">
-        <Text display="inline" textAlign="center" color="textSubtle" mb="20px">
-          {entrusting}
-          <>{tvl ? <>{tvlString}</> : <Skeleton display="inline-block" height={16} width={70} mt="2px" />}</>
-          {inFunds}
+    <Flex justifyContent="space-around" alignItems="flex-start" flexDirection={['column', null, null, 'row']}>
+      <Box maxWidth="500px">
+        {/* <GradientLogo height="48px" width="48px" mb="24px" /> */}
+        <Heading scale="xl" textTransform="uppercase">
+          {t('Used by millions.')}
+        </Heading>
+        <Heading scale="xl" mb="32px" textTransform="uppercase">
+          {t('Trusted with billions.')}
+        </Heading>
+        <Text color="textSubtle">
+          {t(
+            `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy `,
+          )}
         </Text>
-      </Flex>
+        <Flex flexWrap="wrap">
+          <Text display="inline" color="textSubtle" mb="20px">
+            {entrusting}
+            <>{tvl ? <>{tvlString}</> : <Skeleton display="inline-block" height={16} width={70} mt="2px" />}</>
+            {inFunds}
+          </Text>
+        </Flex>
 
-      <Text textAlign="center" color="textSubtle" bold mb="32px">
-        {t('Will you join them?')}
-      </Text>
-
-      <Flex flexDirection={['column', null, null, 'row']}>
+        <Text color="textSubtle" bold mb="32px">
+          {t('Will you join them?')}
+        </Text>
+      </Box>
+      <Flex flexDirection={['column', 'column', 'column', 'row']} maxWidth="550px" width="100%">
         <IconCard {...UsersCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
           <StatCardContent
             headingText={t('%users% users', { users })}

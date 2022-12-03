@@ -4,7 +4,8 @@ import ConnectWalletButton from 'components/ConnectWalletButton'
 import { useTranslation } from '@pancakeswap/localization'
 import Image from 'next/image'
 import styled, { keyframes } from 'styled-components'
-import bunnyImage from '../../../../public/images/home/lunar-bunny/astronaut-bunny.png'
+// import bunnyImage from '../../../../public/images/home/lunar-bunny/astronaut-bunny.png'
+import heroLogoText from '../../../../public/images/home/HeroLogoText/HeroLogoText.png'
 import CompositeImage, { CompositeImageProps } from './CompositeImage'
 import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
 
@@ -109,47 +110,51 @@ const Hero = () => {
           }
         `}
       </style>
-      <BgWrapper>
+      {/* <BgWrapper>
         <InnerWrapper>
           <SlideSvgDark className="slide-svg-dark" width="100%" />
           <SlideSvgLight className="slide-svg-light" width="100%" />
         </InnerWrapper>
-      </BgWrapper>
+      </BgWrapper> */}
       <Flex
         position="relative"
-        flexDirection={['column-reverse', null, null, 'row']}
-        alignItems={['flex-end', null, null, 'center']}
+        flexDirection={['column', null, null, 'row']}
+        alignItems={['center', null, null, 'center']}
         justifyContent="center"
         mt={[account ? '280px' : '50px', null, 0]}
         id="homepage-hero"
       >
+        <Flex
+          height={['100%', null, null, '100%']}
+          width={['100%', null, null, '100%']}
+          flex={[null, null, null, '1']}
+          mb={['24px', null, null, '0']}
+          position="relative"
+          margin="0 50px"
+        >
+          <BunnyWrapper>
+            <Image src={heroLogoText} priority placeholder="blur" alt={t('MoMO Swap')} />
+          </BunnyWrapper>
+
+          {/* <StarsWrapper>
+            <CompositeImage {...starsImage} />
+          </StarsWrapper> */}
+        </Flex>
         <Flex flex="1" flexDirection="column">
-          <Heading scale="xxl" color="secondary" mb="24px">
-            {t('The moon is made of pancakes.')}
+          <Heading scale="xxl" color="secon dary" mb="8px">
+            {t('TRUSTED BY MILLIONS')}
           </Heading>
           <Heading scale="md" mb="24px">
-            {t('Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.')}
+            {t(
+              `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy `,
+            )}
           </Heading>
           <Flex>
-            {!account && <ConnectWalletButton mr="8px" />}
+            {!account && <ConnectWalletButton mr="8px" children="Buy Now" />}
             <NextLinkFromReactRouter to="/swap">
               <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
             </NextLinkFromReactRouter>
           </Flex>
-        </Flex>
-        <Flex
-          height={['192px', null, null, '100%']}
-          width={['192px', null, null, '100%']}
-          flex={[null, null, null, '1']}
-          mb={['24px', null, null, '0']}
-          position="relative"
-        >
-          <BunnyWrapper>
-            <Image src={bunnyImage} priority placeholder="blur" alt={t('Lunar bunny')} />
-          </BunnyWrapper>
-          <StarsWrapper>
-            <CompositeImage {...starsImage} />
-          </StarsWrapper>
         </Flex>
       </Flex>
     </>

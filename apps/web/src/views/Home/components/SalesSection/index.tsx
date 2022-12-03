@@ -23,18 +23,26 @@ const SalesSection: React.FC<React.PropsWithChildren<SalesSectionProps>> = (prop
   return (
     <Flex flexDirection="column">
       <Flex
-        flexDirection={['column-reverse', null, null, reverse ? 'row-reverse' : 'row']}
-        alignItems={['flex-end', null, null, 'center']}
+        flexDirection={['column', null, null, reverse ? 'row-reverse' : 'row']}
+        alignItems={['flex-start', null, null, 'center']}
         justifyContent="center"
       >
         <Flex
+          height={['192px', null, null, '100%']}
+          width={['192px', null, null, '100%']}
+          flex={[null, null, null, '1']}
+          mb={['24px', null, null, '0']}
+        >
+          <CompositeImage {...images} />
+        </Flex>
+        <Flex
           flexDirection="column"
           flex="1"
-          ml={[null, null, null, reverse && '64px']}
+          ml={[null, null, null, reverse && null]}
           mr={[null, null, null, !reverse && '64px']}
           alignSelf={['flex-start', null, null, 'center']}
         >
-          <ColoredWordHeading text={headingText} />
+          <ColoredWordHeading text={headingText} color="#1BE0AA" />
           <Text color="textSubtle" mb="24px">
             {bodyText}
           </Text>
@@ -62,14 +70,6 @@ const SalesSection: React.FC<React.PropsWithChildren<SalesSectionProps>> = (prop
               <RouterLink to={secondaryButton.to}>{secondaryButton.text}</RouterLink>
             )}
           </Flex>
-        </Flex>
-        <Flex
-          height={['192px', null, null, '100%']}
-          width={['192px', null, null, '100%']}
-          flex={[null, null, null, '1']}
-          mb={['24px', null, null, '0']}
-        >
-          <CompositeImage {...images} />
         </Flex>
       </Flex>
     </Flex>

@@ -18,9 +18,9 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
   images: {
     path: '/images/home/trade/',
     attributes: [
-      { src: 'BNB', alt: t('BNB token') },
-      { src: 'BTC', alt: t('BTC token') },
-      { src: 'CAKE', alt: t('CAKE token') },
+      { src: 'MATIC', alt: t('MATIC token') },
+      { src: 'USD', alt: t('USDC token') },
+      { src: 'MOMO', alt: t('MOMO token') },
     ],
   },
 })
@@ -42,9 +42,9 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
   images: {
     path: '/images/home/earn/',
     attributes: [
-      { src: 'pie', alt: t('Pie chart') },
-      { src: 'stonks', alt: t('Stocks chart') },
-      { src: 'folder', alt: t('Folder with cake token') },
+      // { src: 'pie', alt: t('Pie chart') },
+      { src: 'FOLDER-TRANSPARENT', alt: t('Transparent folder') },
+      { src: 'stocks', alt: t('Stocks chart') },
     ],
   },
 })

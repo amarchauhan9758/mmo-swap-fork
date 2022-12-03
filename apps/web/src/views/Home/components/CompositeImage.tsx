@@ -18,17 +18,17 @@ const Wrapper = styled(Box)<{ maxHeight: string }>`
   max-height: ${({ maxHeight }) => maxHeight};
 
   & :nth-child(2) {
-    animation: ${floatingAnim('3px', '15px')} 3s ease-in-out infinite;
+    animation: ${floatingAnim('60px', '60px')} 3s ease-in-out infinite;
     animation-delay: 1s;
   }
 
   & :nth-child(3) {
-    animation: ${floatingAnim('5px', '10px')} 3s ease-in-out infinite;
+    animation: ${floatingAnim('50px', '50px')} 3s ease-in-out infinite;
     animation-delay: 0.66s;
   }
 
   & :nth-child(4) {
-    animation: ${floatingAnim('6px', '5px')} 3s ease-in-out infinite;
+    animation: ${floatingAnim('40px', '-30px')} 3s ease-in-out infinite;
     animation-delay: 0.33s;
   }
 
@@ -86,7 +86,7 @@ export const getSrcSet = (base: string, imageSrc: string, extension = '.png') =>
 const CompositeImage: React.FC<React.PropsWithChildren<ComponentProps>> = ({
   path,
   attributes,
-  maxHeight = '512px',
+  maxHeight = '212px',
 }) => {
   return (
     <Wrapper maxHeight={maxHeight}>

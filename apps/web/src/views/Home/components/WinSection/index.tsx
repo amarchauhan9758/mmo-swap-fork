@@ -56,8 +56,7 @@ const TopRightImgWrapper = styled(Flex)`
 
 const PredictionCardData: IconCardData = {
   icon: <PredictionsIcon width="36px" color="inverseContrast" />,
-  background: 'linear-gradient(180deg, #ffb237 0%, #ffcd51 51.17%, #ffe76a 100%);',
-  borderColor: '#ffb237',
+  borderColor: '#1BE0AA',
   rotation: '-2.36deg',
 }
 
@@ -95,40 +94,42 @@ const WinSection = () => {
 
   return (
     <>
-      <BgWrapper>
+      {/* <BgWrapper>
         <BottomLeftImgWrapper>
           <CompositeImage {...bottomLeftImage} />
         </BottomLeftImgWrapper>
         <TopRightImgWrapper>
           <CompositeImage {...topRightImage} />
         </TopRightImgWrapper>
-      </BgWrapper>
-      <TransparentFrame isDark={theme.isDark}>
-        <Flex flexDirection="column" alignItems="center" justifyContent="center">
-          <ColoredWordHeading textAlign="center" text={t('Win millions in prizes')} />
+      </BgWrapper> */}
+      {/* <TransparentFrame isDark={theme.isDark}> */}
+      <Flex flexDirection={['column-reverse', null, null, 'row']} alignItems="flex-start" justifyContent="center">
+        <Flex m="0 auto" flexDirection={['column', null, null, 'row']} maxWidth="600px">
+          <Flex
+            flex="1"
+            maxWidth={['275px', null, null, '100%']}
+            mr={[null, null, null, '24px']}
+            mb={['32px', null, null, '0']}
+          >
+            <IconCard {...PredictionCardData}>
+              <PredictionCardContent />
+            </IconCard>
+          </Flex>
+          <Flex flex="1" maxWidth={['275px', null, null, '100%']}>
+            <IconCard {...LotteryCardData}>
+              <LotteryCardContent />
+            </IconCard>
+          </Flex>
+        </Flex>
+        <Flex flexDirection={['column']}>
+          <ColoredWordHeading text={t('Win millions in prizes')} />
           <Text color="textSubtle">{t('Provably fair, on-chain games.')}</Text>
           <Text mb="40px" color="textSubtle">
             {t('Win big with PancakeSwap.')}
           </Text>
-          <Flex m="0 auto" flexDirection={['column', null, null, 'row']} maxWidth="600px">
-            <Flex
-              flex="1"
-              maxWidth={['275px', null, null, '100%']}
-              mr={[null, null, null, '24px']}
-              mb={['32px', null, null, '0']}
-            >
-              <IconCard {...PredictionCardData}>
-                <PredictionCardContent />
-              </IconCard>
-            </Flex>
-            <Flex flex="1" maxWidth={['275px', null, null, '100%']}>
-              <IconCard {...LotteryCardData}>
-                <LotteryCardContent />
-              </IconCard>
-            </Flex>
-          </Flex>
         </Flex>
-      </TransparentFrame>
+      </Flex>
+      {/* </TransparentFrame> */}
     </>
   )
 }

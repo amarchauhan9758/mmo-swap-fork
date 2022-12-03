@@ -4,6 +4,7 @@ import { Trans, useTranslation } from '@pancakeswap/localization'
 import { useState } from 'react'
 import { useAuth } from 'hooks/useAuth'
 import { wallets } from 'config/wallets'
+import styled from 'styled-components'
 
 export const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
   const [open, setOpen] = useState(false)

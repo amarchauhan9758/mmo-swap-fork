@@ -12,21 +12,25 @@ const StatCardContent: React.FC<
   return (
     <Flex
       minHeight={[null, null, null, '168px']}
-      minWidth="232px"
-      width="fit-content"
       flexDirection="column"
       justifyContent="flex-end"
       mt={[null, null, null, '64px']}
     >
       {isSmallerScreen && remainingWords.length > 13 ? (
-        <Heading scale="lg">{remainingWords}</Heading>
+        <Heading textAlign="left" scale="xl" color="#1BE0AA">
+          {remainingWords}
+        </Heading>
       ) : (
-        <Heading scale="xl">{remainingWords}</Heading>
+        <Heading scale="xl" textAlign="left" color="#1BE0AA">
+          {remainingWords}
+        </Heading>
       )}
-      <Heading color={highlightColor} scale="xl" mb="24px">
+      <Heading scale="xl" mb="24px" textAlign="left">
         {lastWord}
       </Heading>
-      <Text color="textSubtle">{bodyText}</Text>
+      <Text color="textSubtle" textAlign="left">
+        {bodyText}
+      </Text>
     </Flex>
   )
 }

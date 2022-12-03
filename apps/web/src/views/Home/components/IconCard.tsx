@@ -6,7 +6,7 @@ const StyledCard = styled(Card)<{ background: string; rotation?: string }>`
   height: fit-content;
   padding: 1px 1px 4px 1px;
   box-sizing: border-box;
-
+  text-align: center;
   ${({ theme }) => theme.mediaQueries.md} {
     ${({ rotation }) => (rotation ? `transform: rotate(${rotation});` : '')}
   }
@@ -44,7 +44,7 @@ const IconCard: React.FC<React.PropsWithChildren<IconCardProps>> = ({
   return (
     <StyledCard background={background} borderBackground={borderColor} rotation={rotation} {...props}>
       <CardBody>
-        <IconWrapper rotation={rotation}>{icon}</IconWrapper>
+        {/* <IconWrapper rotation={rotation}>{icon}</IconWrapper> */}
         {children}
       </CardBody>
     </StyledCard>

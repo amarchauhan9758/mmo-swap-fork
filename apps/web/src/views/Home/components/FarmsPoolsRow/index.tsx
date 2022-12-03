@@ -16,7 +16,6 @@ import RowHeading from './RowHeading'
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, auto);
-
   ${({ theme }) => theme.mediaQueries.sm} {
     grid-gap: 16px;
     grid-template-columns: repeat(5, auto);
@@ -78,8 +77,8 @@ const FarmsPoolsRow = () => {
               width="auto"
               onClick={() => {
                 setShowFarms((prev) => !prev)
-                clearInterval(timer.current)
-                startTimer()
+                // clearInterval(timer.current)
+                // startTimer()
               }}
             >
               <SwapVertIcon height="24px" width="24px" color="textSubtle" />

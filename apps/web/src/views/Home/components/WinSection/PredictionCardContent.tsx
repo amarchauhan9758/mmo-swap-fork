@@ -19,7 +19,7 @@ const PredictionCardHeader: React.FC<React.PropsWithChildren<{ preText: string; 
   won,
 }) => {
   return (
-    <Heading color="#280D5F" my="8px" scale="xl" bold>
+    <Heading color="#1BE0AA" my="8px" scale="xl" bold>
       {preText}
       {won}
     </Heading>
@@ -52,8 +52,8 @@ const PredictionCardContent = () => {
 
   return (
     <>
-      <Flex flexDirection="column" mt="48px">
-        <Text color="#280D5F" bold fontSize="16px">
+      <Flex flexDirection="column" mt="24px">
+        <Text bold fontSize="16px">
           {t('Prediction')}
         </Text>
         {bnbWonInUsd ? (
