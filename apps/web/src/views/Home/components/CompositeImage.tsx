@@ -18,12 +18,12 @@ const Wrapper = styled(Box)<{ maxHeight: string }>`
   max-height: ${({ maxHeight }) => maxHeight};
 
   & :nth-child(2) {
-    animation: ${floatingAnim('60px', '60px')} 3s ease-in-out infinite;
+    animation: ${floatingAnim('6px', '6px')} 3s ease-in-out infinite;
     animation-delay: 1s;
   }
 
   & :nth-child(3) {
-    animation: ${floatingAnim('50px', '50px')} 3s ease-in-out infinite;
+    animation: ${floatingAnim('20px', '20px')} 3s ease-in-out infinite;
     animation-delay: 0.66s;
   }
 

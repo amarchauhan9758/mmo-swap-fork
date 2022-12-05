@@ -1,19 +1,12 @@
 import React from "react";
 import Svg from "../Svg";
 import { SvgProps } from "../types";
-import LogoRoundIcon from "../Icons/MomoLogo.svg";
 const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
   return (
-    <svg
-      viewBox="0 0 29 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      {...props}
-    >
-      <rect width="29" height="16" fill="url(#pattern0)" />
+    <svg viewBox="0 0 29 16" {...props}>
+      <rect width="29" height="16" fill="url(#pattern12)" />
       <defs>
-        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <pattern id="pattern12" patternContentUnits="objectBoundingBox" width="10" height="10">
           <use xlinkHref="#image0_15_130" transform="translate(0 -0.00838415) scale(0.00106045 0.00192206)" />
         </pattern>
         <image

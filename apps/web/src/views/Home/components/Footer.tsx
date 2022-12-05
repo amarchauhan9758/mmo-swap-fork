@@ -14,6 +14,7 @@ const BgWrapper = styled.div`
   height: 100%;
   top: 0px;
   left: 0px;
+  background: linear-gradient(90deg, #20065b 1.04%, #1be0aa 100%);
 `
 
 const StyledSunburst = styled(SunburstSvg)`
@@ -66,8 +67,8 @@ const topLeftImage = {
   path: '/images/home/flying-pancakes/',
   attributes: [
     { src: '1-bottom', alt: 'Pancake flying on the bottom' },
-    { src: '1-left', alt: 'Pancake flying on the left' },
-    { src: '1-top', alt: 'Pancake flying on the top' },
+    // { src: '1-left', alt: 'Pancake flying on the left' },
+    // { src: '1-top', alt: 'Pancake flying on the top' },
   ],
 }
 
@@ -75,8 +76,8 @@ const bottomRightImage = {
   path: '/images/home/flying-pancakes/',
   attributes: [
     { src: '2-bottom', alt: 'Pancake flying on the bottom' },
-    { src: '2-top', alt: 'Pancake flying on the top' },
-    { src: '2-right', alt: 'Pancake flying on the right' },
+    // { src: '2-top', alt: 'Pancake flying on the top' },
+    // { src: '2-right', alt: 'Pancake flying on the right' },
   ],
 }
 
@@ -87,12 +88,12 @@ const Footer = () => {
 
   return (
     <>
-      <BgWrapper>
+      {/* <BgWrapper>
         <Flex alignItems="center" justifyContent="center" width="100%" height="100%">
           <StyledSunburst />
         </Flex>
-      </BgWrapper>
-      {(isTablet || isDesktop) && (
+      </BgWrapper> */}
+      {/* {(isTablet || isDesktop) && (
         <FloatingPancakesWrapper>
           <TopLeftImgWrapper>
             <CompositeImage {...topLeftImage} maxHeight="256px" />
@@ -101,7 +102,7 @@ const Footer = () => {
             <CompositeImage {...bottomRightImage} maxHeight="256px" />
           </BottomRightImgWrapper>
         </FloatingPancakesWrapper>
-      )}
+      )} */}
       <Wrapper>
         <Heading mb="24px" scale="xl" color="white">
           {t('Start in seconds.')}

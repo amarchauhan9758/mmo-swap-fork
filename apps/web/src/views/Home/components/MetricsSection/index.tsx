@@ -34,7 +34,7 @@ const Stats = () => {
   }
 
   return (
-    <Flex justifyContent="space-around" alignItems="flex-start" flexDirection={['column', null, null, 'row']}>
+    <Flex justifyContent="space-around" alignItems="center" flexDirection={['column', null, null, 'row']}>
       <Box maxWidth="500px">
         {/* <GradientLogo height="48px" width="48px" mb="24px" /> */}
         <Heading scale="xl" textTransform="uppercase">

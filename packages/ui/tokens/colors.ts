@@ -2,7 +2,7 @@ export const baseColors = {
   white: 'white',
   failure: '#ED4B9E',
   failure33: '#ED4B9E33',
-  primary: '#1FC7D4',
+  primary: '#1BE0AA',
   primary0f: '#1FC7D40f',
   primary3D: '#1FC7D43D',
   primaryBright: '#53DEE9',
@@ -12,6 +12,7 @@ export const baseColors = {
   warning: '#FFB237',
   warning2D: '#ED4B9E2D',
   warning33: '#ED4B9E33',
+  baseColor: '#20065b;',
 }
 
 export const additionalColors = {
@@ -30,7 +31,7 @@ export const lightColors = {
   background: '#FAF9FA',
   backgroundDisabled: '#E9EAEB',
   backgroundAlt: '#FFFFFF',
-  backgroundAlt2: 'rgba(255, 255, 255, 0.7)',
+  backgroundAlt2: '',
   cardBorder: '#E7E3EB',
   contrast: '#191326',
   dropdown: '#F6F6F6',
@@ -77,7 +78,7 @@ export const darkColors = {
   textDisabled: '#666171',
   textSubtle: '#B8ADD2',
   disabled: '#524B63',
-  gradientBubblegum: 'linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)',
+  gradientBubblegum: '#20065b',
   gradientInverseBubblegum: 'linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)',
   gradientCardHeader: 'linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)',
   gradientBlue: 'linear-gradient(180deg, #00707F 0%, #19778C 100%)',

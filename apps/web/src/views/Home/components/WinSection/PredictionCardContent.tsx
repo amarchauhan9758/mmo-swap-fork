@@ -41,7 +41,7 @@ const PredictionCardContent = () => {
   const cakeWonInUsd = multiplyPriceByAmount(cakePriceBusd, data?.totalWonCAKE || 0)
 
   const localisedBnbUsdString = formatLocalisedCompactNumber(bnbWonInUsd + cakeWonInUsd)
-  const bnbWonText = t('$%wonInUsd% in BNB + CAKE won so far', { wonInUsd: localisedBnbUsdString })
+  const bnbWonText = t('$%wonInUsd% in MMOSWAP + USDC won so far', { wonInUsd: localisedBnbUsdString })
   const [pretext, wonSoFar] = bnbWonText.split(localisedBnbUsdString)
 
   useEffect(() => {
@@ -64,11 +64,11 @@ const PredictionCardContent = () => {
             <div ref={observerRef} />
           </>
         )}
-        <Text color="#280D5F" mb="24px" bold fontSize="16px">
+        <Text color="#fff" mb="24px" bold fontSize="16px">
           {wonSoFar}
         </Text>
-        <Text color="#280D5F" mb="40px">
-          {t('Predict the price trend of BNB or CAKE to win')}
+        <Text color="#fff" mb="40px">
+          {t('Predict the price trend of MOMO SWAP or MATIC to win')}
         </Text>
       </Flex>
       <Flex alignItems="center" justifyContent="center">

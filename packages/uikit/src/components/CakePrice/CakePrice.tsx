@@ -50,7 +50,7 @@ const CakePrice: React.FC<React.PropsWithChildren<Props>> = ({
       target="_blank"
     >
       <LogoRounded>
-        <LogoRound width="24px" mr="10px" />
+        <LogoRound />
       </LogoRounded>
 
       <Text color={color} bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>

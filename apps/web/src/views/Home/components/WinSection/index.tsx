@@ -62,8 +62,8 @@ const PredictionCardData: IconCardData = {
 
 const LotteryCardData: IconCardData = {
   icon: <TicketFillIcon color="white" width="36px" />,
-  background: ' linear-gradient(180deg, #7645D9 0%, #5121B1 100%);',
-  borderColor: '#3C1786',
+  // background: ' linear-gradient(180deg, #7645D9 0%, #5121B1 100%);',
+  // borderColor: '#3C1786',
   rotation: '1.43deg',
 }
 
@@ -104,7 +104,7 @@ const WinSection = () => {
       </BgWrapper> */}
       {/* <TransparentFrame isDark={theme.isDark}> */}
       <Flex flexDirection={['column-reverse', null, null, 'row']} alignItems="flex-start" justifyContent="center">
-        <Flex m="0 auto" flexDirection={['column', null, null, 'row']} maxWidth="600px">
+        <Flex m="0 auto" flexDirection={['column', 'column', 'row', 'row']} maxWidth="600px">
           <Flex
             flex="1"
             maxWidth={['275px', null, null, '100%']}
@@ -117,15 +117,16 @@ const WinSection = () => {
           </Flex>
           <Flex flex="1" maxWidth={['275px', null, null, '100%']}>
             <IconCard {...LotteryCardData}>
-              <LotteryCardContent />
+              {/* <LotteryCardContent /> */}
+              <PredictionCardContent />
             </IconCard>
           </Flex>
         </Flex>
-        <Flex flexDirection={['column']}>
+        <Flex flexDirection={['column']} mx="auto" my="4">
           <ColoredWordHeading text={t('Win millions in prizes')} />
           <Text color="textSubtle">{t('Provably fair, on-chain games.')}</Text>
           <Text mb="40px" color="textSubtle">
-            {t('Win big with PancakeSwap.')}
+            {t('Win big with MOMOSWAP.')}
           </Text>
         </Flex>
       </Flex>
