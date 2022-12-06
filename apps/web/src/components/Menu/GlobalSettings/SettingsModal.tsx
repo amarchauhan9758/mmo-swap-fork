@@ -212,7 +212,8 @@ const SettingsModal: React.FC<React.PropsWithChildren<InjectedModalProps>> = ({ 
                   ml="4px"
                 />
               </Flex>
-              <PancakeToggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" />
+              {/* <PancakeToggle checked={audioPlay} onChange={toggleSetAudioMode} scale="md" /> */}
+              <Toggle id="toggle-Flippy-Sound-button" checked={audioPlay} scale="md" onChange={toggleSetAudioMode} />
             </Flex>
           </>
         )}

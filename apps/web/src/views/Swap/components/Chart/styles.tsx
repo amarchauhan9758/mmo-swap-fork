@@ -7,16 +7,18 @@ export const StyledPriceChart = styled(Box)<{
   $isFullWidthContainer?: boolean
 }>`
   border: none;
-  border-radius: 32px;
+  border-radius: 0;
   width: 100%;
   padding-top: 36px;
+
   ${({ theme }) => theme.mediaQueries.sm} {
     padding-top: 8px;
     background: ${({ $isDark }) => ($isDark ? '' : 'rgba(255, 255, 255, 0.5)')};
-    border: ${({ theme }) => `1px solid ${theme.colors.cardBorder}`};
-    border-radius: ${({ $isExpanded }) => ($isExpanded ? '0' : '16px')};
+    //border: ${({ theme }) => `1px solid ${theme.colors.cardBorder}`};
+    box-shadow: 0px -1px 2px 1px #1be0aa, 0px -2px 3px 0px #1be0aa;
+    border-radius: ${({ $isExpanded }) => ($isExpanded ? '0' : '0px')};
     width: ${({ $isExpanded, $isFullWidthContainer }) => ($isFullWidthContainer || $isExpanded ? '100%' : '50%')};
-    height: ${({ $isExpanded }) => ($isExpanded ? '100%' : '516px')};
+    height: ${({ $isExpanded }) => ($isExpanded ? '100%' : '560px')};
   }
 `
 

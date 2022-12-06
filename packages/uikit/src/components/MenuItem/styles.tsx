@@ -1,9 +1,9 @@
 import styled from "styled-components";
+import { variant } from "styled-system";
 import { StyledMenuItemProps } from "./types";
 
 export const StyledMenuItemContainer = styled.div<StyledMenuItemProps>`
   position: relative;
-
   ${({ $isActive, $variant, theme }) =>
     $isActive &&
     $variant === "subMenu" &&
@@ -14,7 +14,7 @@ export const StyledMenuItemContainer = styled.div<StyledMenuItemProps>`
         bottom: 0;
         height: 4px;
         width: 100%;
-        background-color: ${theme.colors.primary};
+        //background-color: ${theme.colors.primary};
         border-radius: 2px 2px 0 0;
       }
     `};
@@ -24,7 +24,8 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   position: relative;
   display: flex;
   align-items: center;
-
+  box-shadow: ${({ $isActive }) => ($isActive ? "0px -1px 2px 1px #1be0aa, 0px -2px 3px 0px #1be0aa" : "")};
+  border-top: ${({ $isActive }) => ($isActive ? "1px solid #1be0aa" : "")};
   color: ${({ theme, $isActive }) => ($isActive ? theme.colors.secondary : theme.colors.textSubtle)};
   font-size: 16px;
   font-weight: ${({ $isActive }) => ($isActive ? "600" : "400")};
@@ -37,7 +38,7 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
     &:after {
       content: "";
       border-radius: 100%;
-      background: ${theme.colors[$statusColor]};
+     background: ${theme.colors[$statusColor]};
       height: 8px;
       width: 8px;
       margin-left: 12px;
