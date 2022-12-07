@@ -40,7 +40,12 @@ import { formatAmount } from '../../utils/formatInfoNumbers'
 const FixedHeightRow = styled(RowBetween)`
   height: 24px;
 `
-
+const RoundedLogo = styled.div`
+  border-radius: 50%;
+  border: 1px solid black;
+  display: inline;
+  line-height: 5;
+`
 interface PositionCardProps extends CardProps {
   pair: Pair
   showUnwrapped?: boolean
@@ -167,7 +172,6 @@ function MinimalPositionCardView({
       placement: 'bottom',
     },
   )
-
   return (
     <>
       {userPoolBalance && JSBI.greaterThan(userPoolBalance.quotient, BIG_INT_ZERO) ? (
@@ -251,9 +255,6 @@ function MinimalPositionCardView({
       ) : (
         <LightCard>
           <Text fontSize="14px" style={{ textAlign: 'center' }}>
-            <span role="img" aria-label="pancake-icon">
-              🥞
-            </span>{' '}
             {t(
               "By adding liquidity you'll earn 0.17% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.",
             )}

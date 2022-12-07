@@ -14,7 +14,7 @@ import { AppHeader, AppBody } from '../../components/App'
 import Page from '../Page'
 
 const Body = styled(CardBody)`
-  background-color: ${({ theme }) => theme.colors.dropdownDeep};
+  //background-color: ${({ theme }) => theme.colors.dropdownDeep};
 `
 
 export default function Pool() {
@@ -130,7 +130,7 @@ export default function Pool() {
         </Body>
         <CardFooter style={{ textAlign: 'center' }}>
           <Link href="/add" passHref>
-            <Button id="join-pool-button" width="100%" startIcon={<AddIcon color="white" />}>
+            <Button id="join-pool-button" width="100%" startIcon={<AddIcon color="black" />}>
               {t('Add Liquidity')}
             </Button>
           </Link>

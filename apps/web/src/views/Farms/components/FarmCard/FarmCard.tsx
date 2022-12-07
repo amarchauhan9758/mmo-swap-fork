@@ -21,6 +21,7 @@ const StyledCard = styled(Card)`
   align-self: baseline;
   max-width: 100%;
   margin: 0 0 24px 0;
+  box-shadow: 0px -1px 2px 1px #1be0aa, 0px -2px 3px 0px #1be0aa;
   ${({ theme }) => theme.mediaQueries.sm} {
     max-width: 350px;
     margin: 0 12px 46px;
@@ -35,7 +36,7 @@ const FarmCardInnerContainer = styled(Flex)`
 
 const ExpandingWrapper = styled.div`
   padding: 24px;
-  border-top: 2px solid ${({ theme }) => theme.colors.cardBorder};
+  //border-top: 2px solid ${({ theme }) => theme.colors.cardBorder};
   overflow: hidden;
 `
 

@@ -18,10 +18,11 @@ const getBorderColor = ({ theme, variant }: StyledButtonMenuProps) => {
 
 const StyledButtonMenu = styled.div<StyledButtonMenuProps>`
   background-color: ${getBackgroundColor};
-  border-radius: 16px;
+  //border-radius: 16px;
   display: ${({ fullWidth }) => (fullWidth ? "flex" : "inline-flex")};
   border: 1px solid ${getBorderColor};
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "auto")};
+  box-shadow: 0px -2px 2px 0px #1be0aa, -1px -2px 2px 0px #1be0aa, 1px -2px 2px 0px #1be0aa;
 
   & > button,
   & > a {

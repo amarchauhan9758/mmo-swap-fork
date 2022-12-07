@@ -71,7 +71,7 @@ export function usePhishingBannerManager(): [boolean, () => void] {
   const now = Date.now()
   const showPhishingWarningBanner = hideTimestampPhishingWarningBanner
     ? differenceInDays(now, hideTimestampPhishingWarningBanner) >= 1
-    : true
+    : false
   const hideBanner = useCallback(() => {
     dispatch(hidePhishingWarningBanner())
   }, [dispatch])

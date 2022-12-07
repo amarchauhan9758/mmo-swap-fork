@@ -22,7 +22,7 @@ import {
   OptionProps,
   FlexLayout,
   PageHeader,
-  NextLinkFromReactRouter,    
+  NextLinkFromReactRouter,
 } from '@pancakeswap/uikit'
 import styled from 'styled-components'
 import Page from 'components/Layout/Page'
@@ -174,9 +174,8 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
   const isInactive = pathname.includes('history')
   const isActive = !isInactive && !isArchived
 
-  console.log("viewmode", viewMode);
-  console.log("userDataLoaded", userDataLoaded, poolLength, farmsLP);
-    
+  console.log('viewmode', viewMode)
+  console.log('userDataLoaded', userDataLoaded, poolLength, farmsLP)
 
   useCakeVaultUserData()
 
@@ -224,10 +223,9 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
         }
 
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(farm.quoteTokenPriceBusd)
-        console.log("totalLiquidity",farm.pid,totalLiquidity.toString());
-        console.log("cake price", cakePrice.toString());
-        
-  
+        console.log('totalLiquidity', farm.pid, totalLiquidity.toString())
+        console.log('cake price', cakePrice.toString())
+
         const { cakeRewardsApr, lpRewardsApr } = isActive
           ? getFarmApr(
               chainId,
@@ -341,28 +339,28 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <FarmsContext.Provider value={{ chosenFarmsMemoized }}>
       <PageHeader>
-        <FarmFlexWrapper justifyContent="space-between">
-          <Box>
-            <FarmH1 as="h1" scale="xxl" color="secondary" mb="24px">
+        <FarmFlexWrapper>
+          <Box mx="auto">
+            <FarmH1 as="h1" scale="xxl" color="white" mb="24px" textAlign="center" textTransform="uppercase">
               {t('Farms')}
             </FarmH1>
             <FarmH2 scale="lg" color="text">
               {t('Stake LP tokens to earn.')}
             </FarmH2>
-            <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
+            {/* <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
               <Button p="0" variant="text">
                 <Text color="primary" bold fontSize="16px" mr="4px">
                   {t('Community Auctions')}
                 </Text>
                 <ArrowForwardIcon color="primary" />
               </Button>
-            </NextLinkFromReactRouter>
+            </NextLinkFromReactRouter> */}
           </Box>
-          {chainId === ChainId.MATIC && (
+          {/* {chainId === ChainId.MATIC && (
             <Box>
               <BCakeBoosterCard />
             </Box>
-          )}
+          )} */}
         </FarmFlexWrapper>
       </PageHeader>
       <Page>

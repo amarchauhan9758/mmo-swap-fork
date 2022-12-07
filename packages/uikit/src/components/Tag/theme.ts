@@ -18,7 +18,7 @@ export const styleVariants = {
     backgroundColor: "primary",
   },
   [variants.SECONDARY]: {
-    backgroundColor: "secondary",
+    backgroundColor: "none",
   },
   [variants.SUCCESS]: {
     backgroundColor: "success",

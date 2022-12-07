@@ -14,9 +14,9 @@ const getOutlineStyles = ({ outline, theme, variant: variantKey = variants.PRIMA
     const color = theme.colors[themeColorKey];
 
     return `
-      color: ${color};
-      background: ${theme.colors.background};
-      border: 2px solid ${color};
+      //color: ${color};
+      //background: ${theme.colors.background};
+      //border: 2px solid ${color};
     `;
   }
 
@@ -32,7 +32,7 @@ export const StyledTag = styled.div<ThemedProps>`
   white-space: nowrap;
 
   & > svg {
-    fill: currentColor;
+    fill: #1be0aa;
   }
 
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}

@@ -17,4 +17,5 @@ export const StyledSwapContainer = styled(Flex)<{ $isChartExpanded: boolean }>`
 
 export const StyledInputCurrencyWrapper = styled(Box)`
   width: 328px;
+  box-shadow: 0px -2px 2px 1px #1be0aa, 0px -1px 2px 1px #1be0aa;
 `

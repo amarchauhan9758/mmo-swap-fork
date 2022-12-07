@@ -30,7 +30,7 @@ export const lightColors = {
   secondary80: '#7645D980',
   background: '#FAF9FA',
   backgroundDisabled: '#E9EAEB',
-  backgroundAlt: '#FFFFFF',
+  backgroundAlt: '#000',
   backgroundAlt2: '',
   cardBorder: '#E7E3EB',
   contrast: '#191326',

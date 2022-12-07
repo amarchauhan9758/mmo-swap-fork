@@ -14,11 +14,9 @@ const Wrapper = styled.div`
   & > div {
     width: 100%;
     background-color: ${({ theme }) => theme.colors.input};
-    border: 0;
   }
   & button {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-radius: 0px;
   }
   &:hover {
     background-color: ${({ theme }) => theme.colors.input};

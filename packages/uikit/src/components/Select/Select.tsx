@@ -13,9 +13,10 @@ const DropDownHeader = styled.div`
   padding: 0px 16px;
   box-shadow: ${({ theme }) => theme.shadows.inset};
   border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
-  border-radius: 16px;
+  //border-radius: 16px;
   background: ${({ theme }) => theme.colors.input};
   transition: border-radius 0.15s;
+  box-shadow: 0px -2px 2px 0px #1be0aa, -1px -2px 2px 0px #1be0aa, 1px -2px 2px 0px #1be0aa;
 `;
 
 const DropDownListContainer = styled.div`

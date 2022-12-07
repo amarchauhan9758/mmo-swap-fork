@@ -22,7 +22,6 @@ const AbsoluteWrapper = styled(Flex)<{ visible: boolean; index: number; topOffse
   margin-top: ${({ visible }) => (visible ? 0 : `50%`)};
   transition: opacity, margin-top, 0.4s ease-out;
   flex-direction: column;
-
   ${({ index, theme }) =>
     index > 0
       ? `

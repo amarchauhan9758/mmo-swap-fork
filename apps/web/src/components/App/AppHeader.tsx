@@ -18,7 +18,8 @@ const AppHeaderContainer = styled(Flex)`
   align-items: center;
   justify-content: space-between;
   padding: 24px;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
 `
 
@@ -56,7 +57,7 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = ({ title, subtitle, 
             )}
           </Flex>
           <Flex alignItems="center">
-            <Text color="textSubtle" fontSize="14px">
+            <Text color="textSubtle" fontSize="14px" textAlign="center">
               {subtitle}
             </Text>
           </Flex>

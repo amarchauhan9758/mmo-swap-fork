@@ -10,7 +10,7 @@ import { createPortal } from 'react-dom'
 import { useTranslation } from '@pancakeswap/localization'
 // import BigNumber from 'bignumber.js'
 import { useRouter } from 'next/router'
-import { useAccount } from '@pancakeswap/awgmi'
+//import { useAccount } from '@pancakeswap/awgmi'
 import { useIsMounted } from '@pancakeswap/hooks'
 import {
   Image,

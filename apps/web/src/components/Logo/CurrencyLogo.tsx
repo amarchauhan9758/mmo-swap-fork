@@ -11,8 +11,11 @@ const StyledLogo = styled(Logo)<{ size: string }>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
   border-radius: 50%;
-` 
- 
+  border: 0px solid #1be0aa;
+  box-shadow: 0px -3px 2px #1be0aa;
+  margin: 2px;
+`
+
 export default function CurrencyLogo({
   currency,
   size = '24px',
@@ -22,32 +25,31 @@ export default function CurrencyLogo({
   size?: string
   style?: React.CSSProperties
 }) {
-  const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined) 
-  
+  const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
+
   const srcs: string[] = useMemo(() => {
     if (currency?.isNative) return []
 
     if (currency?.isToken) {
-  
-      const tokenLogoURL = getTokenLogoURL(currency)      
+      const tokenLogoURL = getTokenLogoURL(currency)
 
       if (currency instanceof WrappedTokenInfo) {
-        if (!tokenLogoURL) return [...uriLocations] 
+        if (!tokenLogoURL) return [...uriLocations]
         return [...uriLocations, tokenLogoURL]
       }
       if (!tokenLogoURL) return []
-      return [tokenLogoURL] 
-    } 
-    
+      return [tokenLogoURL]
+    }
+
     return []
   }, [currency, uriLocations])
 
   if (currency?.isNative) {
     if (currency.chainId === ChainId.BSC) {
       return <BinanceIcon width={size} style={style} />
-    } 
+    }
     return <StyledLogo size={size} srcs={[`/images/chains/${currency.chainId}.png`]} width={size} style={style} />
-  } 
+  }
 
   return <StyledLogo size={size} srcs={srcs} alt={`${currency?.symbol ?? 'token'} logo`} style={style} />
 }

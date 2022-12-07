@@ -89,7 +89,6 @@ export const WBNB = {
   ),
 }
 
-
 export const WMATIC = {
   [ChainId.MATIC]: new ERC20Token(
     ChainId.MATIC,
@@ -101,16 +100,13 @@ export const WMATIC = {
   ),
 }
 
-
-
-
 export const WNATIVE: Record<number, ERC20Token> = {
   [ChainId.ETHEREUM]: WETH9[ChainId.ETHEREUM],
   [ChainId.RINKEBY]: WETH9[ChainId.RINKEBY],
   [ChainId.GOERLI]: WETH9[ChainId.GOERLI],
   [ChainId.BSC]: WBNB[ChainId.BSC],
   [ChainId.BSC_TESTNET]: WBNB[ChainId.BSC_TESTNET],
-  [ChainId.MATIC]: WMATIC[ChainId.MATIC], 
+  [ChainId.MATIC]: WMATIC[ChainId.MATIC],
 }
 
 export const NATIVE: Record<
