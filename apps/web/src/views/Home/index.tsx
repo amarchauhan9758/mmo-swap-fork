@@ -7,6 +7,7 @@ import { PageMeta } from 'components/Layout/Page'
 import { useTranslation } from '@pancakeswap/localization'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { ChainId } from '@pancakeswap/sdk'
+import { Box } from '@pancakeswap/uikit'
 import Hero from './components/Hero'
 import { swapSectionData, earnSectionData, cakeSectionData } from './components/SalesSection/data'
 import MetricsSection from './components/MetricsSection'
@@ -19,7 +20,6 @@ import CakeDataRow from './components/CakeDataRow'
 import { WedgeTopLeft, InnerWedgeWrapper, OuterWedgeWrapper, WedgeTopRight } from './components/WedgeSvgs'
 import UserBanner from './components/UserBanner'
 import MultipleBanner from './components/Banners/MultipleBanner'
-import { Box } from '@pancakeswap/uikit'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;

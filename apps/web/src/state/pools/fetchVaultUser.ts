@@ -9,7 +9,6 @@ const cakeVaultAddress = getCakeVaultAddress(137)
 const flexibleSideVaultContract = getCakeFlexibleSideVaultV2Contract()
 // console.log("flexibleSideVaultContract", flexibleSideVaultContract);
 
-
 export const fetchVaultUser = async (account: string): Promise<SerializedLockedVaultUser> => {
   try {
     const calls = ['userInfo', 'calculatePerformanceFee', 'calculateOverdueFee'].map((method) => ({
@@ -18,7 +17,7 @@ export const fetchVaultUser = async (account: string): Promise<SerializedLockedV
       params: [account],
     }))
 
-    let chainId = 137
+    const chainId = 137
 
     const [userContractResponse, [currentPerformanceFee], [currentOverdueFee]] = await multicallv2({
       abi: cakeVaultAbi,

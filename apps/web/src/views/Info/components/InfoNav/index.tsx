@@ -23,10 +23,12 @@ import { useWeb3React } from '@pancakeswap/wagmi'
 import { bsc, mainnet } from '@pancakeswap/wagmi/chains'
 
 const NavWrapper = styled(Flex)`
-  background: ${({ theme }) => theme.colors.gradientCardHeader};
+  //background: ${({ theme }) => theme.colors.gradientCardHeader};
   justify-content: space-between;
   padding: 20px 16px;
   flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
   gap: 8px;
   ${({ theme }) => theme.mediaQueries.sm} {
     padding: 20px 40px;
@@ -54,7 +56,7 @@ const InfoNav: React.FC<{ isStableSwap: boolean }> = ({ isStableSwap }) => {
     <NavWrapper>
       <Flex>
         <Box>
-          <ButtonMenu activeIndex={activeIndex} scale="sm" variant="subtle">
+          <ButtonMenu activeIndex={activeIndex} scale="sm" variant="secondary">
             <ButtonMenuItem as={NextLinkFromReactRouter} to={`/info${chainPath}${stableSwapQuery}`}>
               {t('Overview')}
             </ButtonMenuItem>

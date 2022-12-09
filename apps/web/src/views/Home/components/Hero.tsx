@@ -150,7 +150,7 @@ const Hero = () => {
             )}
           </Heading>
           <Flex>
-            {!account && <ConnectWalletButton mr="8px" children="Buy Now" />}
+            {!account && <ConnectWalletButton mr="8px">Buy Now</ConnectWalletButton>}
             <NextLinkFromReactRouter to="/swap">
               <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
             </NextLinkFromReactRouter>

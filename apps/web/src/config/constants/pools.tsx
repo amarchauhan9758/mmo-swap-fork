@@ -27,7 +27,7 @@ export const vaultPoolConfig = {
     autoCompoundFrequency: 5000,
     gasLimit: 500000,
     tokenImage: {
-      primarySrc: `/images/tokens/${bscTokens.cake.address}.svg`,
+      primarySrc: `/images/137/tokens/${maticTokens.mmo.address}.png`,
       secondarySrc: '/images/tokens/autorenew.svg',
     },
   },
@@ -61,12 +61,12 @@ export const livePools: SerializedPoolConfig[] = [
     contractAddress: {
       97: '0x2f4e8133fEDD9BeE97Ea6E6Cb4540D48c6D33C73',
       56: '0x2f4e8133fEDD9BeE97Ea6E6Cb4540D48c6D33C73',
-      137: '0x2f4e8133fEDD9BeE97Ea6E6Cb4540D48c6D33C73'
+      137: '0x2f4e8133fEDD9BeE97Ea6E6Cb4540D48c6D33C73',
     },
     poolCategory: PoolCategory.CORE,
     tokenPerBlock: '10',
     isFinished: false,
-  }, 
+  },
 
   {
     sousId: 1,
@@ -75,7 +75,7 @@ export const livePools: SerializedPoolConfig[] = [
     contractAddress: {
       97: '0x391CECf462221070E098B31b8Ce57D45E704e43e',
       56: '0x391CECf462221070E098B31b8Ce57D45E704e43e',
-      137: '0x391CECf462221070E098B31b8Ce57D45E704e43e'
+      137: '0x391CECf462221070E098B31b8Ce57D45E704e43e',
     },
     poolCategory: PoolCategory.CORE,
     tokenPerBlock: '0.001',
@@ -3471,7 +3471,6 @@ const finishedPools = [
   //     56: '0xD5668e936B951292Ddf8c84553CC58F85948F816',
   //   },
   //   poolCategory: PoolCategory.CORE,
-
   //   enableEmergencyWithdraw: true,
   //   tokenPerBlock: '7.502',
   // },

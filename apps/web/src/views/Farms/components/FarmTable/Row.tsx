@@ -58,9 +58,10 @@ const CellInner = styled.div`
 
 const StyledTr = styled.tr`
   cursor: pointer;
-  &:not(:last-child) {
-    border-bottom: 2px solid ${({ theme }) => theme.colors.disabled};
-  }
+  border-top: 2px solid ${({ theme }) => theme.colors.cardBorder};
+  // &:not(:last-child) {
+  //   border-top: 2px solid ${({ theme }) => theme.colors.cardBorder};
+  // }
 `
 
 const EarnedMobileCell = styled.td`

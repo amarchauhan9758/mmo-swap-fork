@@ -3,12 +3,12 @@ import { INFO_CLIENT, INFO_CLIENT_ETH, BLOCKS_CLIENT, BLOCKS_CLIENT_ETH } from '
 import { ChainId } from '@pancakeswap/sdk'
 import { PCS_V2_START, PCS_ETH_START, ETH_TOKEN_BLACKLIST, TOKEN_BLACKLIST } from 'config/constants/info'
 
-export type MultiChainName = 'BSC' | 'ETH' | 'MATIC'
+export type MultiChainName = 'BSC' | 'ETH'
 
 export const multiChainQueryMainToken = {
   BSC: 'BNB',
   ETH: 'ETH',
-  MATIC: 'MATIC'
+  // MATIC: 'MATIC',
 }
 
 export const multiChainBlocksClient = {
@@ -24,7 +24,7 @@ export const multiChainStartTime = {
 export const multiChainId = {
   BSC: ChainId.BSC,
   ETH: ChainId.ETHEREUM,
-  MATIC: ChainId.MATIC
+  // MATIC: ChainId.MATIC,
 }
 
 export const multiChainPaths = {
@@ -45,7 +45,7 @@ export const multiChainQueryEndPoint = {
 export const multiChainScan = {
   BSC: 'BscScan',
   ETH: 'EtherScan',
-  MATIC: 'EtherScan'
+  // MATIC: 'EtherScan',
 }
 
 export const multiChainTokenBlackList = {

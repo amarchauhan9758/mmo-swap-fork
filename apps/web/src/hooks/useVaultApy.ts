@@ -69,12 +69,12 @@ export function useVaultApy({ duration = MAX_LOCK_DURATION }: { duration?: numbe
       },
     ]
 
-    let chainId = 137
+    const chainId = 137
 
     const [[specialFarmsPerBlock], cakePoolInfo, [totalSpecialAllocPoint]] = await multicallv2({
       abi: masterChefAbi,
       calls,
-      chainId
+      chainId,
     })
 
     const cakePoolSharesInSpecialFarms = FixedNumber.from(cakePoolInfo.allocPoint).divUnsafe(

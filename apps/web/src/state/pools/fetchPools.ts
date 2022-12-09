@@ -11,15 +11,11 @@ import chunk from 'lodash/chunk'
 import sousChefV2 from '../../config/abi/sousChefV2.json'
 import sousChefV3 from '../../config/abi/sousChefV3.json'
 
-
-
-
 const livePoolsWithEnd = poolsConfig.filter((p) => p.sousId !== 0 && !p.isFinished)
 
 const startEndBlockCalls = livePoolsWithEnd.flatMap((poolConfig) => {
-
   return [
-    { 
+    {
       address: getAddress(poolConfig.contractAddress, 137),
       name: 'startBlock',
     },
@@ -27,12 +23,11 @@ const startEndBlockCalls = livePoolsWithEnd.flatMap((poolConfig) => {
       address: getAddress(poolConfig.contractAddress, 137),
       name: 'bonusEndBlock',
     },
-  ]  
+  ]
 })
 
 export const fetchPoolsBlockLimits = async (chainId: number) => {
-
-  const startEndBlockRaw = await multicall(sousChefABI, startEndBlockCalls,chainId)
+  const startEndBlockRaw = await multicall(sousChefABI, startEndBlockCalls, chainId)
 
   const startEndBlockResult = startEndBlockRaw.reduce((resultArray, item, index) => {
     const chunkIndex = Math.floor(index / 2)
@@ -92,7 +87,7 @@ export const fetchPoolsStakingLimits = async (
     })
     .flat()
 
-    let chainId = 137
+  const chainId = 137
 
   const poolStakingResultRaw = await multicallv2({
     abi: sousChefV2,

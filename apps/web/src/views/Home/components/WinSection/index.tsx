@@ -1,12 +1,14 @@
 import styled from 'styled-components'
-import { Flex, Text, TicketFillIcon, PredictionsIcon } from '@pancakeswap/uikit'
+import { Flex, Text, TicketFillIcon, PredictionsIcon, Card } from '@pancakeswap/uikit'
 import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import ColoredWordHeading from '../ColoredWordHeading'
 import IconCard, { IconCardData } from '../IconCard'
 import PredictionCardContent from './PredictionCardContent'
-import LotteryCardContent from './LotteryCardContent'
-import CompositeImage from '../CompositeImage'
+// import LotteryCardContent from './LotteryCardContent'
+// import CompositeImage from '../CompositeImage'
+// import Icon from 'components/Svg/RefreshIcon'
+// import { StyledCard } from 'views/Ifos/components/IfoCardStyles'
 
 const TransparentFrame = styled.div<{ isDark: boolean }>`
   background: ${({ theme }) => (theme.isDark ? 'rgba(8, 6, 11, 0.6)' : ' rgba(255, 255, 255, 0.6)')};
@@ -15,7 +17,6 @@ const TransparentFrame = styled.div<{ isDark: boolean }>`
   box-sizing: border-box;
   backdrop-filter: blur(12px);
   border-radius: 72px;
-
   ${({ theme }) => theme.mediaQueries.md} {
     padding: 40px;
   }
@@ -56,14 +57,13 @@ const TopRightImgWrapper = styled(Flex)`
 
 const PredictionCardData: IconCardData = {
   icon: <PredictionsIcon width="36px" color="inverseContrast" />,
-  borderColor: '#1BE0AA',
-  rotation: '-2.36deg',
+  // rotation: '-2.36deg',
 }
 
 const LotteryCardData: IconCardData = {
   icon: <TicketFillIcon color="white" width="36px" />,
-  // background: ' linear-gradient(180deg, #7645D9 0%, #5121B1 100%);',
-  // borderColor: '#3C1786',
+  background: ' linear-gradient(180deg, #7645D9 0%, #5121B1 100%);',
+  borderColor: '#3C1786',
   rotation: '1.43deg',
 }
 
@@ -116,7 +116,7 @@ const WinSection = () => {
             </IconCard>
           </Flex>
           <Flex flex="1" maxWidth={['275px', null, null, '100%']}>
-            <IconCard {...LotteryCardData}>
+            <IconCard {...PredictionCardData}>
               {/* <LotteryCardContent /> */}
               <PredictionCardContent />
             </IconCard>

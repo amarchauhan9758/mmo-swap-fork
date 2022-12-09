@@ -124,13 +124,11 @@ export const StakedContainer = ({ children, ...props }) => {
 
   const { allowance } = props.userData || {}
 
-  console.log("props user data", props.userData);
-  
- 
-  const isApproved = account && allowance  && allowance.isGreaterThan(0)
+  console.log('props user data', props.userData)
 
-  console.log("lpContract", lpContract,isApproved);
-  
+  const isApproved = account && allowance && allowance.isGreaterThan(0)
+
+  console.log('lpContract', lpContract, isApproved)
 
   return children({
     ...props,

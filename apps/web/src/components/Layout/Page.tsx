@@ -11,6 +11,7 @@ const StyledPage = styled(Container)`
   min-height: calc(100vh - 64px);
   padding-top: 16px;
   padding-bottom: 16px;
+  box-shadow: 0px -2px 2px 0px #1be0aa, -1px -2px 2px 0px #1be0aa, 1px -2px 2px 0px #1be0aa;
 
   ${({ theme }) => theme.mediaQueries.sm} {
     padding-top: 24px;

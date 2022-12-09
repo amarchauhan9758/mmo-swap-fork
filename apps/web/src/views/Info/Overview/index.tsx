@@ -32,7 +32,9 @@ export const ChartCardsContainer = styled(Flex)`
     flex-direction: row;
   } ;
 `
-
+const StyledInfoPage = styled(Page)`
+  box-shadow: none;
+`
 const Overview: React.FC<React.PropsWithChildren> = () => {
   const {
     t,
@@ -69,7 +71,7 @@ const Overview: React.FC<React.PropsWithChildren> = () => {
   }, [poolDatas])
 
   return (
-    <Page>
+    <StyledInfoPage>
       <Heading scale="lg" mb="16px" id="info-overview-title">
         {t('PancakeSwap Info & Analytics')}
       </Heading>
@@ -107,7 +109,7 @@ const Overview: React.FC<React.PropsWithChildren> = () => {
         {t('Transactions')}
       </Heading>
       <TransactionTable transactions={transactions} />
-    </Page>
+    </StyledInfoPage>
   )
 }
 

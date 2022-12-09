@@ -46,7 +46,7 @@ const StyledActionPanel = styled.div<{ expanded: boolean }>`
           ${collapseAnimation} 300ms linear forwards
         `};
   overflow: hidden;
-  background: ${({ theme }) => theme.colors.dropdown};
+  //background: ${({ theme }) => theme.colors.dropdown};
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -63,7 +63,6 @@ const ActionContainer = styled.div<{ isAutoVault?: boolean; hasBalance?: boolean
   flex-direction: column;
   flex: 1;
   flex-wrap: wrap;
-
   ${({ theme }) => theme.mediaQueries.sm} {
     flex-direction: row;
   }

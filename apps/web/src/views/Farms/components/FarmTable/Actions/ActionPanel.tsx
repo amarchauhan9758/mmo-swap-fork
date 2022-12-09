@@ -59,7 +59,6 @@ const Container = styled.div<{ expanded }>`
   width: 100%;
   flex-direction: column-reverse;
   padding: 24px;
-
   ${({ theme }) => theme.mediaQueries.lg} {
     flex-direction: row;
     align-items: center;
@@ -85,7 +84,8 @@ const StakeContainer = styled.div`
 const ActionContainer = styled.div`
   display: flex;
   flex-direction: column;
-
+  margin: 15px;
+  box-shadow: 0px -2px 2px 0px #1be0aa, -1px -2px 2px 0px #1be0aa, 1px -2px 2px 0px #1be0aa;
   ${({ theme }) => theme.mediaQueries.sm} {
     flex-direction: row;
     align-items: center;
@@ -142,47 +142,6 @@ const ActionPanel: React.FunctionComponent<React.PropsWithChildren<ActionPanelPr
 
   return (
     <Container expanded={expanded}>
-      <InfoContainer>
-        <ValueContainer>
-          {farm.isCommunity && farm.auctionHostingEndDate && (
-            <ValueWrapper>
-              <Text>{t('Auction Hosting Ends')}</Text>
-              <Text paddingLeft="4px">
-                {new Date(farm.auctionHostingEndDate).toLocaleString(locale, {
-                  month: 'short',
-                  day: 'numeric',
-                  year: 'numeric',
-                })}
-              </Text>
-            </ValueWrapper>
-          )}
-          {!isDesktop && (
-            <>
-              <ValueWrapper>
-                <Text>{t('APR')}</Text>
-                <Apr {...apr} useTooltipText={false} boosted={farm.boosted} />
-              </ValueWrapper>
-              <ValueWrapper>
-                <Text>{t('Multiplier')}</Text>
-                <Multiplier {...multiplier} />
-              </ValueWrapper>
-              <ValueWrapper>
-                <Text>{t('Liquidity')}</Text>
-                <Liquidity {...liquidity} />
-              </ValueWrapper>
-            </>
-          )}
-        </ValueContainer>
-        {isActive && (
-          <StakeContainer>
-            <StyledLinkExternal href={`/add/${liquidityUrlPathParts}`}>
-              {t('Get %symbol%', { symbol: lpLabel })}
-            </StyledLinkExternal>
-          </StakeContainer>
-        )}
-        <StyledLinkExternal href={bsc}>{t('View Contract')}</StyledLinkExternal>
-        <StyledLinkExternal href={info}>{t('See Pair Info')}</StyledLinkExternal>
-      </InfoContainer>
       <ActionContainer>
         {shouldUseProxyFarm ? (
           <ProxyHarvestActionContainer {...proxyFarm} userDataReady={userDataReady}>
@@ -227,6 +186,47 @@ const ActionPanel: React.FunctionComponent<React.PropsWithChildren<ActionPanelPr
           </StakedContainer>
         )}
       </ActionContainer>
+      <InfoContainer>
+        <ValueContainer>
+          {farm.isCommunity && farm.auctionHostingEndDate && (
+            <ValueWrapper>
+              <Text>{t('Auction Hosting Ends')}</Text>
+              <Text paddingLeft="4px">
+                {new Date(farm.auctionHostingEndDate).toLocaleString(locale, {
+                  month: 'short',
+                  day: 'numeric',
+                  year: 'numeric',
+                })}
+              </Text>
+            </ValueWrapper>
+          )}
+          {!isDesktop && (
+            <>
+              <ValueWrapper>
+                <Text>{t('APR')}</Text>
+                <Apr {...apr} useTooltipText={false} boosted={farm.boosted} />
+              </ValueWrapper>
+              <ValueWrapper>
+                <Text>{t('Multiplier')}</Text>
+                <Multiplier {...multiplier} />
+              </ValueWrapper>
+              <ValueWrapper>
+                <Text>{t('Liquidity')}</Text>
+                <Liquidity {...liquidity} />
+              </ValueWrapper>
+            </>
+          )}
+        </ValueContainer>
+        {isActive && (
+          <StakeContainer>
+            <StyledLinkExternal href={`/add/${liquidityUrlPathParts}`}>
+              {t('Get %symbol%', { symbol: lpLabel })}
+            </StyledLinkExternal>
+          </StakeContainer>
+        )}
+        <StyledLinkExternal href={bsc}>{t('View Contract')}</StyledLinkExternal>
+        <StyledLinkExternal href={info}>{t('See Pair Info')}</StyledLinkExternal>
+      </InfoContainer>
     </Container>
   )
 }
