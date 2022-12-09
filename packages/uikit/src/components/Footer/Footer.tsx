@@ -63,7 +63,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
                       href={href}
                       target="_blank"
                       rel="noreferrer noopener"
-                      color={isHighlighted ? vars.colors.warning : "text"}
+                      color="white"
                       bold={false}
                     >
                       {label}

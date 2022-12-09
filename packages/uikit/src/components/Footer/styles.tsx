@@ -22,7 +22,7 @@ export const StyledListItem = styled.li`
   text-transform: capitalize;
 
   &:first-child {
-    color: ${darkColors.secondary};
+    // color: ${darkColors.secondary};
     font-weight: 600;
     text-transform: uppercase;
   }

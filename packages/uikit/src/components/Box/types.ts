@@ -8,6 +8,7 @@ import {
   SpaceProps,
   GridProps as _GridProps,
   ColorProps,
+  ConfigStyle,
 } from "styled-system";
 
 export interface BoxProps

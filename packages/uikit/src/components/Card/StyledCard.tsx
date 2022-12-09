@@ -47,7 +47,7 @@ export const StyledCard = styled.div<StyledCardProps>`
   color: ${({ theme, isDisabled }) => theme.colors[isDisabled ? "textDisabled" : "text"]};
   overflow: hidden;
   position: relative;
-
+  box-shadow: 0px -2px 5px 0px #1be0aa, 1px -2px 5px 0px #1be0aa;
   ${({ isActive }) =>
     isActive &&
     css`

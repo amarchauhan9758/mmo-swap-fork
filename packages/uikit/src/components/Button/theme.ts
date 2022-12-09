@@ -25,7 +25,7 @@ export const styleVariants = {
     backgroundColor: "transparent",
     border: "none",
     borderColor: "primary",
-    boxShadow: "0px -2px 2px #1BE0AA, 1px -2px 3px #1BE0AA",
+    boxShadow: "0px -1px 5px 1px #1BE0AA",
     borderRadius: "0px",
     color: "primary",
     ":disabled": {
