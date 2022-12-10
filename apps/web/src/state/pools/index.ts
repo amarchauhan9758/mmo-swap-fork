@@ -223,7 +223,7 @@ export const fetchPoolsPublicDataAsync = (currentBlockNumber: number, chainId: n
         
 
         const earningTokenAddress = isAddress(pool.earningToken.address)
-        const earningTokenPrice = earningTokenAddress ? 0.00003 : 0
+        const earningTokenPrice = earningTokenAddress ? prices[earningTokenAddress] : 0
         
         console.log("earningTokenPrice", earningTokenPrice);
         
