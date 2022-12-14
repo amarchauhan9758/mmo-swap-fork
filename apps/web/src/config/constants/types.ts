@@ -60,6 +60,49 @@ export interface Ifo {
   [PoolIds.poolUnlimited]: IfoPoolInfo
 }
 
+
+export interface Iwo {
+  id: string
+  isActive: boolean
+  address: string
+  name: string
+  currency: Token
+  token: Token
+  releaseBlockNumber: number
+  articleUrl: string
+  campaignId: string
+  tokenOfferingPrice: number
+  description?: string
+  twitterUrl?: string
+  telegramUrl?: string
+  version: number
+  vestingTitle?: string
+  cIFO?: boolean
+  plannedStartTime?: number
+  plannedEndTime?: number
+  [PoolIds.poolBasic]?: IfoPoolInfo
+  [PoolIds.poolUnlimited]: IfoPoolInfo
+}
+
+// export interface Iwo {
+//   id: string
+//   isActive: boolean
+//   address: string
+//   name: string
+//   subTitle?: string
+//   description?: string
+//   launchDate: string
+//   launchTime: string
+//   saleAmount: string
+//   raiseAmount: string
+//   cakeToBurn: string
+//   projectSiteUrl: string
+//   currency: string
+//   currencyAddress: string
+//   tokenDecimals: number
+//   releaseBlockNumber: number
+// }
+
 export enum PoolCategory {
   'COMMUNITY' = 'Community',
   'CORE' = 'Core',

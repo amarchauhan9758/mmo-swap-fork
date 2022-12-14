@@ -1,5 +1,5 @@
 import { ERC20Token, ChainId } from '@pancakeswap/sdk'
-import { bscTokens } from '@pancakeswap/tokens'
+import { bscTokens, maticTokens } from '@pancakeswap/tokens'
 import { CAKE_BNB_LP_MAINNET } from './lp'
 import { Ifo } from './types'
 
@@ -20,8 +20,8 @@ const ifos: Ifo[] = [
       raiseAmount: '$1,312,500',
       distributionRatio: 0.75,
     },
-    currency: bscTokens.cake,
-    token: bscTokens.mgp,
+    currency: maticTokens.cake,
+    token: maticTokens.mmo,
     releaseBlockNumber: 21595548,
     campaignId: '511900000',
     articleUrl:
