@@ -1,6 +1,6 @@
 import { Flex, Link, LinkExternal, Skeleton, Text, TimerIcon, Balance } from '@pancakeswap/uikit'
 import AddToWalletButton, { AddToWalletTextOptions } from 'components/AddToWallet/AddToWalletButton'
-import { bsc } from '@pancakeswap/wagmi/chains'
+import { bsc, matic } from '@pancakeswap/wagmi/chains'
 import { useTranslation } from '@pancakeswap/localization'
 import { memo } from 'react'
 import { useCurrentBlock } from 'state/block/hooks'
@@ -62,7 +62,7 @@ const PoolStatsInfo: React.FC<React.PropsWithChildren<ExpandedFooterProps>> = ({
 
   return (
     <>
-      <Flex justifyContent="space-between">
+      <Flex justifyContent="space-between" flexDirection="column">
         <Flex flexDirection="column" minWidth="200px" m="5px">
           {profileRequirement && (profileRequirement.required || profileRequirement.thresholdPoints.gt(0)) && (
             <Flex mb="8px" justifyContent="space-between">
@@ -133,11 +133,7 @@ const PoolStatsInfo: React.FC<React.PropsWithChildren<ExpandedFooterProps>> = ({
 
           {vaultKey && (
             <Flex mb="2px" justifyContent={alignLinksToRight ? 'flex-end' : 'flex-start'}>
-              <LinkExternal
-                href="https://docs.pancakeswap.finance/products/syrup-pool/new-cake-pool"
-                bold={false}
-                small
-              >
+              <LinkExternal href="#" bold={false} small>
                 {t('View Tutorial')}
               </LinkExternal>
             </Flex>
@@ -145,7 +141,7 @@ const PoolStatsInfo: React.FC<React.PropsWithChildren<ExpandedFooterProps>> = ({
           {poolContractAddress && (
             <Flex mb="2px" justifyContent={alignLinksToRight ? 'flex-end' : 'flex-start'}>
               <LinkExternal
-                href={`${bsc.blockExplorers.default.url}/address/${
+                href={`${matic.blockExplorers.default.url}/address/${
                   vaultKey ? cakeVaultContractAddress : poolContractAddress
                 }`}
                 bold={false}

@@ -22,6 +22,7 @@ export const styleVariants = {
   },
   [variants.SUCCESS]: {
     backgroundColor: "success",
+    color: "#000",
   },
   [variants.TEXTDISABLED]: {
     backgroundColor: "textDisabled",

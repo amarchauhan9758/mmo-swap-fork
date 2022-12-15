@@ -85,6 +85,7 @@ export function TransactionSubmittedContent({
               })}
             </Link>
           )}
+
           {currencyToAdd && (
             <AddToWalletButton
               variant="tertiary"

@@ -93,7 +93,7 @@ const ManualPoolTag: React.FC<React.PropsWithChildren<TagProps>> = (props) => {
 const CompoundingPoolTag: React.FC<React.PropsWithChildren<TagProps>> = (props) => {
   const { t } = useTranslation();
   return (
-    <Tag variant="success" outline startIcon={<AutoRenewIcon width="18px" color="success" mr="4px" />} {...props}>
+    <Tag variant="success" outline startIcon={<AutoRenewIcon width="18px" mr="4px" color="black" />} {...props}>
       {t("Auto")}
     </Tag>
   );

@@ -45,10 +45,7 @@ const CakePrice: React.FC<React.PropsWithChildren<Props>> = ({
   showSkeleton = true,
 }) => {
   return cakePriceUsd ? (
-    <PriceLink
-      href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
-      target="_blank"
-    >
+    <PriceLink href="#BuyMMO" target="_blank">
       <LogoRounded>
         <LogoRound />
       </LogoRounded>

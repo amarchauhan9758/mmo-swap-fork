@@ -53,8 +53,8 @@ const Apr: React.FC<React.PropsWithChildren<AprProps>> = ({
     vaultKey,
   } = pool
 
-  console.log("rawApr", pool.sousId, vaultKey, apr, rawApr);
-  
+  console.log('rawApr', pool.sousId, vaultKey, apr, rawApr)
+
   const { t } = useTranslation()
   const { account } = useActiveWeb3React()
   const currentBlock = useCurrentBlock()

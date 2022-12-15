@@ -12,7 +12,7 @@ export interface LiquidityProps {
 }
 
 const LiquidityWrapper = styled.div`
-  min-width: 110px;
+  min-width: 30px;
   font-weight: 600;
   text-align: right;
   margin-right: 14px;

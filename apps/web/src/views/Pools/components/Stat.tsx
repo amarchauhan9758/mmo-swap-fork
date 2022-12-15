@@ -78,7 +78,6 @@ export const DurationAvg = () => {
   )
 
   const { avgLockDurationsInWeeks } = useAvgLockDuration()
-
   return (
     <StatWrapper
       label={

@@ -33,6 +33,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
   ...props
 }) => {
   const isMounted = useIsMounted();
+
   return (
     <StyledFooter
       data-theme="dark"
@@ -88,7 +89,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
         >
           <Flex order={[2, null, 1]} alignItems="center">
             <SkeletonV2 variant="round" width="56px" height="32px" isDataReady={isMounted}>
-              <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
+              <ThemeSwitcher isDark={true} toggleTheme={toggleTheme} />
             </SkeletonV2>
             <LangSelector
               currentLang={currentLang}
@@ -105,7 +106,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
             <Button
               data-theme="light"
               as="a"
-              href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
+              href="#BuyMMO"
               target="_blank"
               scale="sm"
               endIcon={<ArrowForwardIcon color="backgroundAlt" />}

@@ -31,10 +31,6 @@ export const StyledTag = styled.div<ThemedProps>`
   font-weight: 400;
   white-space: nowrap;
 
-  & > svg {
-    fill: #1be0aa;
-  }
-
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
 
   ${variant({

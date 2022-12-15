@@ -276,7 +276,7 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
         <Flex justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
           <Flex flex="1" flexDirection="column" alignItems="center" mr={['8px', 0]}>
             <Heading as="h1" scale="xxl" color="white" mb="24px">
-              {t('Syrup Pools')}
+              {t('Pools')}
             </Heading>
             <Heading scale="md" color="text">
               {t('Just stake some tokens to earn.')}
@@ -337,7 +337,7 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
             </LabelWrapper>
           </FilterContainer>
         </PoolControls>
-        {showFinishedPools && (
+        {/* {showFinishedPools && (
           <FinishedTextContainer>
             <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
               {t('Looking for v1 CAKE syrup pools?')}
@@ -346,7 +346,7 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
               {t('Go to migration page')}.
             </FinishedTextLink>
           </FinishedTextContainer>
-        )}
+        )} */}
         {account && !userDataLoaded && stakedOnly && (
           <Flex justifyContent="center" mb="4px">
             <Loading />

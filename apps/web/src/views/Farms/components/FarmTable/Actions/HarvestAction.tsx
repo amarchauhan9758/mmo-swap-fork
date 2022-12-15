@@ -119,7 +119,7 @@ export const HarvestAction: React.FunctionComponent<React.PropsWithChildren<Harv
       toastSuccess(
         `${t('Harvested')}!`,
         <ToastDescriptionWithTx txHash={receipt.transactionHash}>
-          {t('Your %symbol% earnings have been sent to your wallet!', { symbol: 'CAKE' })}
+          {t('Your %symbol% earnings have been sent to your wallet!', { symbol: 'MMO' })}
         </ToastDescriptionWithTx>,
       )
       onDone?.()
@@ -141,7 +141,7 @@ export const HarvestAction: React.FunctionComponent<React.PropsWithChildren<Harv
     <ActionContainer style={{ minHeight: 124.5 }}>
       <ActionTitles>
         <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="4px">
-          CAKE
+          MMO
         </Text>
         <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
           {t('Earned')}

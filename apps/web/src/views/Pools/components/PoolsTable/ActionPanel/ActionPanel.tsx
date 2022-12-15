@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from 'styled-components'
-import { Box, Flex, HelpIcon, Text, useTooltip, useMatchBreakpoints, Farm as FarmUI } from '@pancakeswap/uikit'
+import { Box, Flex, HelpIcon, Text, useTooltip, useMatchBreakpoints, Farm as FarmUI, Tag } from '@pancakeswap/uikit'
 import { useVaultPoolByKey } from 'state/pools/hooks'
 import { getVaultPosition, VaultPosition } from 'utils/cakePool'
 import BigNumber from 'bignumber.js'
@@ -176,19 +176,18 @@ const ActionPanel: React.FC<React.PropsWithChildren<ActionPanelProps>> = ({ acco
         {isMobile && vaultKey === VaultKey.CakeVault && vaultPosition === VaultPosition.None && (
           <CakeVaultApr pool={pool} userData={vaultData.userData} vaultPosition={vaultPosition} />
         )}
-        <Box width="100%">
+        {/* <Box width="100%">
           {pool.vaultKey === VaultKey.CakeVault && (
             <VaultPositionTagWithLabel
               userData={vaultData.userData as DeserializedLockedVaultUser}
               width={['auto', , 'fit-content']}
               ml={['12px', , , , , '32px']}
             />
-          )}
-          <ActionContainer isAutoVault={!!pool.vaultKey} hasBalance={poolStakingTokenBalance.gt(0)}>
-            {pool.vaultKey ? <AutoHarvest {...pool} /> : <Harvest {...pool} />}
-            <Stake pool={pool} />
-          </ActionContainer>
-        </Box>
+          )} */}
+        <ActionContainer isAutoVault={!!pool.vaultKey} hasBalance={poolStakingTokenBalance.gt(0)}>
+          {pool.vaultKey ? <AutoHarvest {...pool} /> : <Harvest {...pool} />}
+          <Stake pool={pool} />
+        </ActionContainer>
       </ActionContainer>
     </StyledActionPanel>
   )

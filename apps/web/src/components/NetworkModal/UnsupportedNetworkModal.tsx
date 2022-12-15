@@ -11,7 +11,6 @@ import { useAccount, useNetwork } from 'wagmi'
 import { useMemo } from 'react'
 import { ChainId } from '@pancakeswap/sdk'
 import Dots from '../Loader/Dots'
-
 // Where chain is not supported or page not supported
 export function UnsupportedNetworkModal({ pageSupportedChains }: { pageSupportedChains: number[] }) {
   const { switchNetworkAsync, isLoading, canSwitch } = useSwitchNetwork()
@@ -44,13 +43,13 @@ export function UnsupportedNetworkModal({ pageSupportedChains }: { pageSupported
           {supportedMainnetChains?.map((c) => c.name).join(', ')}
         </Text>
         <div style={{ textAlign: 'center' }}>
-          <Image
+          {/* <Image
             layout="fixed"
             width="194px"
             height="175px"
             src="/images/check-your-network.png"
             alt="check your network"
-          />
+          /> */}
         </div>
         <Message variant="warning">
           <MessageText>{t('Please switch your network to continue.')}</MessageText>

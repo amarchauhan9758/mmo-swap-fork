@@ -6,7 +6,7 @@ import { useState } from 'react'
 const IntroSteps = [
   {
     title: <Trans>Your first step in the DeFi world</Trans>,
-    icon: 'https://cdn.pancakeswap.com/wallets/wallet_intro.png',
+    icon: 'https://www.0xshah.xyz/content/images/2022/01/Web3-Wallets-Banner-Image.png',
     description: (
       <Trans>
         A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, NFTs and much more.
@@ -58,7 +58,7 @@ export const StepIntro = ({ docLink, docText }: { docLink: string; docText: stri
           <Heading as="h2" color="secondary">
             {introStep.title}
           </Heading>
-          <Image m="auto" src={introStep.icon} width={198} height={178} />
+          {/* <Image m="auto" src={logo} width={198} height={178} /> */}
           <Text maxWidth="368px" m="auto" small color="textSubtle">
             {introStep.description}
           </Text>
@@ -68,7 +68,7 @@ export const StepIntro = ({ docLink, docText }: { docLink: string; docText: stri
         <StepDot place="left" active={step === 0} onClick={() => setStep(0)} />
         <StepDot place="right" active={step === 1} onClick={() => setStep(1)} />
       </AtomBox>
-      <Button minHeight={40} variant="subtle" external as={LinkExternal} color="backgroundAlt" href={docLink}>
+      <Button minHeight={40} variant="subtle" external as={LinkExternal} color="backgroundAlt" href="#">
         {docText}
       </Button>
     </AtomBox>

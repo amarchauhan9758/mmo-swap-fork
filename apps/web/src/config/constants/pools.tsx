@@ -32,12 +32,12 @@ export const vaultPoolConfig = {
     },
   },
   [VaultKey.CakeFlexibleSideVault]: {
-    name: <Trans>Flexible CAKE</Trans>,
+    name: <Trans>Flexible MMO</Trans>,
     description: <Trans>Flexible staking on the side.</Trans>,
     autoCompoundFrequency: 5000,
     gasLimit: 500000,
     tokenImage: {
-      primarySrc: `/images/tokens/${bscTokens.cake.address}.svg`,
+      primarySrc: `/images/137/tokens/${maticTokens.mmo.address}.png`,
       secondarySrc: '/images/tokens/autorenew.svg',
     },
   },
