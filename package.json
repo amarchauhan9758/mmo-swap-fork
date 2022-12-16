@@ -47,5 +47,9 @@
     "tsconfig": "*",
     "turbo": "^1.6.1",
     "vitest": "^0.23.1"
+  },
+  "dependencies": {
+    "@binance-chain/bsc-use-wallet": "^0.8.1",
+    "web3": "^1.8.1"
   }
 }

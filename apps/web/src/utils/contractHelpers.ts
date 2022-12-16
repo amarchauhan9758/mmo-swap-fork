@@ -57,6 +57,7 @@ import lpTokenAbi from 'config/abi/lpToken.json'
 import cakeAbi from 'config/abi/cake.json'
 import ifoV1Abi from 'config/abi/ifoV1.json'
 import ifoV2Abi from 'config/abi/ifoV2.json'
+import iwoAbi from 'config/abi/iwo.json'
 import pointCenterIfo from 'config/abi/pointCenterIfo.json'
 import lotteryV2Abi from 'config/abi/lotteryV2.json'
 import masterChef from 'config/abi/masterchef.json'
@@ -108,6 +109,7 @@ import type {
   AnniversaryAchievement,
   IfoV1,
   IfoV2,
+  Iwo,
   Erc20,
   Erc721,
   Cake,
@@ -177,6 +179,11 @@ export const getErc721Contract = (address: string, signer?: Signer | Provider) =
 export const getLpContract = (address: string, chainId?: number, signer?: Signer | Provider) => {
   return getContract({ abi: lpTokenAbi, address, signer, chainId }) as LpToken
 }
+
+export const getIwoContract = (address: string, signer?: Signer | Provider) => {
+  return getContract({ abi: iwoAbi, address, signer }) as Iwo
+}
+
 export const getIfoV1Contract = (address: string, signer?: Signer | Provider) => {
   return getContract({ abi: ifoV1Abi, address, signer }) as IfoV1
 }

@@ -12,6 +12,25 @@ export const maticTokens = {
       'MATIC',
       'https://www.binance.com/',
     ),
+    cttoken: new ERC20Token(
+      ChainId.MATIC,
+      '0x9E1871AEDED1475796bC1AD210A7eC895c6b9a31',
+      18,
+      'CT',
+      'CT',
+      'https://www.binance.com/',
+      
+    ),
+    dttoken: new ERC20Token(
+      ChainId.MATIC,
+      '0x79C1098f258A1A4C5c2AEc0a270358Ae62bb5096',
+      18,
+      'DT',
+      'DT',
+      'https://www.binance.com/',
+      
+    ),
+    
     cake: MMO_MAINET,
     mmo: MMO_MAINET,
     usdc: USDC_MATIC,

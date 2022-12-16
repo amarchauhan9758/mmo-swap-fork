@@ -117,14 +117,14 @@ const IFOBanner = () => {
           </NextLinkFromReactRouter>
         </S.LeftWrapper>
         <RightWrapper>
-          <IFOIconImage
+          {/* <IFOIconImage
             src={`/images/tokens/${activeIfoWithBlocks.token.address}.png`}
             onError={(event) => {
               // @ts-ignore
               // eslint-disable-next-line no-param-reassign
               event.target.style.display = 'none'
             }}
-          />
+          /> */}
           {!isMobile ? (
             <Image
               src={IFOImage}

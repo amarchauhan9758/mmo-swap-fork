@@ -29,6 +29,7 @@ export const config = {
     '/farms',
     '/add',
     '/ifo',
+    '/iwo',
     '/remove',
     '/prediction',
     '/find',

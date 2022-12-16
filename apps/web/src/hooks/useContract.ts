@@ -37,6 +37,7 @@ import {
   getErc721Contract,
   getFarmAuctionContract,
   getIfoV1Contract,
+  getIwoContract,
   getIfoV2Contract,
   getIfoV3Contract,
   getLotteryV2Contract,
@@ -79,6 +80,14 @@ import { useActiveChainId } from './useActiveChainId'
 /**
  * Helper hooks to get specific contracts (by ABI)
  */
+
+ 
+ 
+
+ export const useIwoContract = (address: string) => {
+  const { data: signer } = useSigner()
+  return useMemo(() => getIwoContract(address, signer), [address, signer])
+}
 
 export const useIfoV1Contract = (address: string) => {
   const { data: signer } = useSigner()
