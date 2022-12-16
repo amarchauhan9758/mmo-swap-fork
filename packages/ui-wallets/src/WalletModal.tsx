@@ -442,7 +442,7 @@ const Intro = ({ docLink, docText }: { docLink: string; docText: string }) => {
         {t('Haven’t got a wallet yet?')}
       </Heading>
       {/* <Image src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" "width={198} height={178} /> */}
-      <Button as={LinkExternal} color="backgroundAlt" variant="subtle" href="#">
+      <Button as={LinkExternal} color="backgroundAlt" variant="subtle" href="/#">
         {docText}
       </Button>
     </>

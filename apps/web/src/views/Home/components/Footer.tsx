@@ -114,7 +114,7 @@ const Footer = () => {
           {t('No registration needed.')}
         </Text>
 
-        <Link external href="#">
+        <Link external href="/#">
           {t('Learn how to start')}
         </Link>
         {!account && <ConnectWalletButton mt="24px" />}
