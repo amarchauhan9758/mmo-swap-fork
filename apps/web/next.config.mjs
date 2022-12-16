@@ -25,7 +25,7 @@ const withTM = NextTranspileModules([
 const withVanillaExtract = createVanillaExtractPlugin()
 
 const sentryWebpackPluginOptions =
-  process.env.VERCEL_ENV === 'production'
+  process.env.VERCEL_ENV !== 'production'
     ? {
         // Additional config options for the Sentry Webpack plugin. Keep in mind that
         // the following options are set automatically, and overriding them is not
@@ -39,7 +39,7 @@ const sentryWebpackPluginOptions =
       }
     : {
         silent: true, // Suppresses all logs
-        // dryRun: !process.env.SENTRY_AUTH_TOKEN,
+        dryRun: !a4797c598e50403f8b4105fe5a0edb46,
       }
 
 /** @type {import('next').NextConfig} */
