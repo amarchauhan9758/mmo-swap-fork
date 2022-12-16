@@ -55,7 +55,7 @@ const PhishingWarningBanner: React.FC<React.PropsWithChildren> = () => {
       <Text as="span" color="warning" small bold textTransform="uppercase">
         {t('Phishing warning: ')}
       </Text>
-      {warningTextAsParts.map((text, i) => (
+      {/* {warningTextAsParts.map((text, i) => (
         <Text
           // eslint-disable-next-line react/no-array-index-key
           key={i}
@@ -66,7 +66,7 @@ const PhishingWarningBanner: React.FC<React.PropsWithChildren> = () => {
         >
           {text}
         </Text>
-      ))}
+      ))} */}
     </>
   )
   return (
