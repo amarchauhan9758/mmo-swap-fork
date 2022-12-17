@@ -72,12 +72,12 @@ export const useBCakeTooltipContent = () => {
     <>
       <Box mb="20px">
         {t(
-          'Yield Boosters allow you to boost your farming yields by locking CAKE in the fixed-term staking CAKE pool. The more CAKE you lock, and the longer you lock them, the higher the boost you will receive.',
+          'Yield Boosters allow you to boost your farming yields by locking MMO in the fixed-term staking MMO pool. The more MMO you lock, and the longer you lock them, the higher the boost you will receive.',
         )}
       </Box>
       <Box>
         {t('To learn more, check out the')}
-        <Link target="_blank" href="https://medium.com/pancakeswap/introducing-bcake-farm-yield-boosters-b27b7a6f0f84">
+        <Link target="_blank" href="#">
           {t('Medium Article')}
         </Link>
       </Box>

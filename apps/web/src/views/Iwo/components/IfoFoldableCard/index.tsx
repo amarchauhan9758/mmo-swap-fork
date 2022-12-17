@@ -7,6 +7,8 @@ import {
   CardHeader,
   ExpandableButton,
   ExpandableLabel,
+  Flex,
+  Logo,
   useMatchBreakpoints,
   useToast,
 } from '@pancakeswap/uikit'
@@ -59,9 +61,6 @@ const StyledCard = styled(Card)<{ $isCurrent?: boolean }>`
   }
 
   ${({ theme }) => theme.mediaQueries.sm} {
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
-
     > div {
       border-top-left-radius: 32px;
       border-top-right-radius: 32px;
@@ -79,8 +78,8 @@ const Header = styled(CardHeader)<{ ifoId: string; $isCurrent?: boolean }>`
   background-position: center;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  background-color: ${({ theme }) => theme.colors.dropdown};
-  background-image: ${({ ifoId }) => `url('/images/iwo/${ifoId}-bg.png')`};
+  // background-color: ${({ theme }) => theme.colors.dropdown};
+  //background-image: ${({ ifoId }) => `url('/images/iwo/${ifoId}-bg.png')`};
   ${({ theme }) => theme.mediaQueries.md} {
     height: 112px;
   }
@@ -179,7 +178,11 @@ export const IfoCurrentCard = ({
         <StyledCard $isCurrent>
           {!isMobile && (
             <>
-              <Header $isCurrent ifoId={ifo.id} />
+              <Header $isCurrent ifoId={ifo.id}>
+                <Flex margin="auto">
+                  <Logo href="/" />
+                </Flex>
+              </Header>
               <IfoRibbon publicIfoData={publicIfoData} />
             </>
           )}
@@ -353,16 +356,15 @@ const IfoCard: React.FC<React.PropsWithChildren<IfoFoldableCardProps>> = ({ ifo,
           shouldReverse={ifo.version >= 3.1}
           singleCard={!publicIfoData.poolBasic || !walletIfoData.poolBasic}
         >
-          
-            <IfoPoolCard
-              poolId={PoolIds.poolBasic}
-              ifo={ifo}
-              publicIfoData={publicIfoData}
-              walletIfoData={walletIfoData}
-              onApprove={handleApprove}
-              enableStatus={enableStatus}
-            />
-         
+          <IfoPoolCard
+            poolId={PoolIds.poolBasic}
+            ifo={ifo}
+            publicIfoData={publicIfoData}
+            walletIfoData={walletIfoData}
+            onApprove={handleApprove}
+            enableStatus={enableStatus}
+          />
+
           {/* <IfoPoolCard
             poolId={PoolIds.poolUnlimited}
             ifo={ifo}

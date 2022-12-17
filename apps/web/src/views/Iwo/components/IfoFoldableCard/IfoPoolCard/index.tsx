@@ -140,7 +140,7 @@ const SmallCard: React.FC<React.PropsWithChildren<IfoCardProps>> = ({
 
   const cardTitle = ifo.cIFO ? `${config.title} (cIFO)` : config.title
 
-  console.log('add data' , publicIfoData)
+  console.log('add data', publicIfoData)
   return (
     <>
       {tooltipVisible && tooltip}
@@ -159,9 +159,21 @@ const SmallCard: React.FC<React.PropsWithChildren<IfoCardProps>> = ({
           {/* {isVesting ? (
             <IfoVestingCard ifo={ifo} poolId={poolId} publicIfoData={publicIfoData} walletIfoData={walletIfoData} />
           ) : ( */}
-            <>
-              <IfoCardTokens
-                criterias={criterias}
+          <>
+            <IfoCardTokens
+              criterias={criterias}
+              isEligible={isEligible}
+              poolId={poolId}
+              ifo={ifo}
+              publicIfoData={publicIfoData}
+              walletIfoData={walletIfoData}
+              hasProfile={hasActiveProfile}
+              isLoading={isLoading}
+              onApprove={onApprove}
+              enableStatus={enableStatus}
+            />
+            <Box mt="24px">
+              <IfoCardActions
                 isEligible={isEligible}
                 poolId={poolId}
                 ifo={ifo}
@@ -169,29 +181,17 @@ const SmallCard: React.FC<React.PropsWithChildren<IfoCardProps>> = ({
                 walletIfoData={walletIfoData}
                 hasProfile={hasActiveProfile}
                 isLoading={isLoading}
-                onApprove={onApprove}
                 enableStatus={enableStatus}
               />
-              <Box mt="24px">
-                <IfoCardActions
-                  isEligible={isEligible}
-                  poolId={poolId}
-                  ifo={ifo}
-                  publicIfoData={publicIfoData}
-                  walletIfoData={walletIfoData}
-                  hasProfile={hasActiveProfile}
-                  isLoading={isLoading}
-                  enableStatus={enableStatus}
-                />
-              </Box>
-              <IfoCardDetails
-                isEligible={isEligible}
-                poolId={poolId}
-                ifo={ifo}
-                publicIfoData={publicIfoData}
-                walletIfoData={walletIfoData}
-              />
-            </>
+            </Box>
+            <IfoCardDetails
+              isEligible={isEligible}
+              poolId={poolId}
+              ifo={ifo}
+              publicIfoData={publicIfoData}
+              walletIfoData={walletIfoData}
+            />
+          </>
           {/* )} */}
         </CardBody>
       </StyledCard>

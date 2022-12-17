@@ -45,7 +45,7 @@ const BCakeCalculator: React.FC<React.PropsWithChildren<BCakeCalculatorProps>> =
   targetInputBalance,
   earningTokenPrice,
   initialState,
-  stakingTokenSymbol = 'CAKE',
+  stakingTokenSymbol = 'MMO',
   lpTotalSupply,
   setBCakeMultiplier,
 }) => {
@@ -112,7 +112,7 @@ const BCakeCalculator: React.FC<React.PropsWithChildren<BCakeCalculatorProps>> =
         <>
           <BCakeBlock style={{ marginTop: 24 }}>
             <Text color="secondary" bold fontSize="12px" textTransform="uppercase">
-              {t('Cake locked')}
+              {t('MMO locked')}
             </Text>
             <BalanceInput
               inputProps={{

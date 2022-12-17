@@ -14,10 +14,10 @@ interface Props {
   ifo: Iwo
   publicIfoData: PublicIfoData
   walletIfoData: WalletIfoData
-  hasProfile: boolean
-  isLoading: boolean
-  isEligible: boolean
-  enableStatus: EnableStatus
+  hasProfile?: boolean
+  isLoading?: boolean
+  isEligible?: boolean
+  enableStatus?: EnableStatus
 }
 
 const IfoCardActions: React.FC<React.PropsWithChildren<Props>> = ({
@@ -34,41 +34,38 @@ const IfoCardActions: React.FC<React.PropsWithChildren<Props>> = ({
   const { account } = useWeb3React()
   const userPoolCharacteristics = walletIfoData[poolId]
 
- 
-
   if (!account) {
     return <ConnectWalletButton width="100%" />
   }
 
- console.log("again check" , userPoolCharacteristics.hasHarvest)
+  console.log('again check', userPoolCharacteristics.hasHarvest)
 
   const needClaim =
-    !userPoolCharacteristics.hasHarvest  && userPoolCharacteristics.userAllocation.gt(0) && userPoolCharacteristics.status == "finished"
+    !userPoolCharacteristics.hasHarvest &&
+    userPoolCharacteristics.userAllocation.gt(0) &&
+    userPoolCharacteristics.status == 'finished'
 
   if (needClaim) {
-     return <ClaimButton poolId={poolId} ifoVersion={ifo.version} walletIfoData={walletIfoData} />
+    return <ClaimButton poolId={poolId} ifoVersion={ifo.version} walletIfoData={walletIfoData} />
   }
 
-  
-  const alreadyClaimed =
-  userPoolCharacteristics.hasHarvest  && userPoolCharacteristics.userAllocation.gt(0)
+  const alreadyClaimed = userPoolCharacteristics.hasHarvest && userPoolCharacteristics.userAllocation.gt(0)
 
   if (alreadyClaimed) {
-      return <Button  disabled width="100%" >Already Claimed</Button>
- }
+    return (
+      <Button disabled width="100%">
+        Already Claimed
+      </Button>
+    )
+  }
 
-
-  if (
-    userPoolCharacteristics.status != "live"
-  ) {
-    return userPoolCharacteristics.status 
+  if (userPoolCharacteristics.status != 'live') {
+    return userPoolCharacteristics.status
   }
 
   return (
     <>
-    
-        <ContributeButton poolId={poolId} ifo={ifo} publicIfoData={publicIfoData} walletIfoData={walletIfoData} />
-   
+      <ContributeButton poolId={poolId} ifo={ifo} publicIfoData={publicIfoData} walletIfoData={walletIfoData} />
     </>
   )
 }

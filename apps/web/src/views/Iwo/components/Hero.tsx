@@ -4,7 +4,7 @@ import { Box, Button, Container, Flex, Heading, Text, useMatchBreakpoints } from
 import { useRouter } from 'next/router'
 
 const StyledHero = styled(Box)`
-  background-image: url('/images/ifos/assets/ifo-banner-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.png');
+  //background-image: url('/images/ifos/assets/ifo-banner-${({ theme }) => (theme.isDark ? 'dark' : 'light')}.png');
   background-position: top, center;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -37,7 +37,6 @@ const DesktopButton = styled(Button)`
 
 const StyledSubTitle = styled(Text)`
   font-size: 16px;
-
   ${({ theme }) => theme.mediaQueries.md} {
     font-size: 20px;
   }
@@ -66,13 +65,13 @@ const Hero = () => {
             flexDirection={['column', 'column', 'column', 'row']}
             style={{ gap: '4px' }}
           >
-            <Box>
+            <Box margin="auto">
               <StyledHeading as="h1" mb={['12px', '12px', '16px']}>
                 {t('IWO: Initial Wizard Offerings')}
               </StyledHeading>
-              <StyledSubTitle bold>
-                {t('Buy new tokens launching on BNB Smart Chain')}
-                {isMobile && <StyledButton onClick={handleClick}>{t('How does it work?')}</StyledButton>}
+              <StyledSubTitle bold textAlign="center">
+                {t('Buy new tokens launching on Polygon Chain')}
+                {/* {isMobile && <StyledButton onClick={handleClick}>{t('How does it work?')}</StyledButton>} */}
               </StyledSubTitle>
             </Box>
             {/* {!isMobile && (
