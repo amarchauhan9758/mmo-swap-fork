@@ -97,7 +97,7 @@ const IfoRibbonSoon = ({ publicIfoData }: { publicIfoData: PublicIfoData }) => {
       <BigCurve $status="coming_soon" />
       <Box position="relative">
         <Heading as="h3" scale="lg" color="secondary">
-          <SoonTimer publicIfoData={publicIfoData} />
+          {/* <SoonTimer publicIfoData={publicIfoData} /> */}
         </Heading>
       </Box>
     </>
@@ -108,9 +108,7 @@ const IfoRibbonLive = ({ publicIfoData }: { publicIfoData: PublicIfoData }) => {
   return (
     <>
       <BigCurve $status="live" />
-      <Box position="relative">
-        <LiveTimer publicIfoData={publicIfoData} />
-      </Box>
+      <Box position="relative">{/* <LiveTimer publicIfoData={publicIfoData} /> */}</Box>
     </>
   )
 }

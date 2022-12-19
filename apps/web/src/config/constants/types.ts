@@ -28,7 +28,6 @@ export enum PoolIds {
   poolBasic = 'poolBasic',
   poolUnlimited = 'poolUnlimited',
 }
-
 export type IfoStatus = 'idle' | 'coming_soon' | 'live' | 'finished'
 
 interface IfoPoolInfo {
@@ -56,8 +55,7 @@ export interface Ifo {
   vestingTitle?: string
   cIFO?: boolean
   plannedStartTime?: number
-  subTitle?: string
-  launchDate?: number
+
   [PoolIds.poolBasic]?: IfoPoolInfo
   [PoolIds.poolUnlimited]: IfoPoolInfo
 }

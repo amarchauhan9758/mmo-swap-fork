@@ -135,18 +135,25 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
   const { t } = useTranslation()
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     t(
-      'Sorry, you didn’t contribute enough CAKE to meet the minimum threshold. You didn’t buy anything in this sale, but you can still reclaim your CAKE.',
+      'Sorry, you didn’t contribute enough MMO to meet the minimum threshold. You didn’t buy anything in this sale, but you can still reclaim your MMO.',
     ),
     { placement: 'bottom' },
   )
 
   const publicPoolCharacteristics = publicIfoData[poolId]
   const userPoolCharacteristics = walletIfoData[poolId]
-  const { offeringAmountInToken, amountTokenCommittedInLP, refundingAmountInLP , totalAmount , userAllocation , hasHarvest } = userPoolCharacteristics
-  const spentAmount = amountTokenCommittedInLP - refundingAmountInLP
+  const {
+    offeringAmountInToken,
+    amountTokenCommittedInLP,
+    refundingAmountInLP,
+    totalAmount,
+    userAllocation,
+    hasHarvest,
+  } = userPoolCharacteristics
+  const spentAmount = +amountTokenCommittedInLP - +refundingAmountInLP
 
   const { currency, token, version } = ifo
- 
+
   const distributionRatio = ifo[poolId].distributionRatio * 100
   const credit = useIfoCredit()
 
@@ -290,52 +297,46 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
       )
     }
 
-    console.log("all data" , walletIfoData[poolId])
-   
-      return (
-        <>
-          <CommitTokenSection commitToken={ifo.currency} mb="24px">
-          <Flex>
-          <Label>{t('Your %symbol% spent', { symbol: currency.symbol })}</Label>
-                  {tagTooltipVisibleOfSpent && tagTooltipOfSpent}
-                  <span ref={tagTargetRefOfSpent}>
-                    <HelpIcon ml="4px" width="15px" height="15px" color="textSubtle" />
-                  </span>
-                </Flex>
-                <BalanceWithLoading
-                  bold
-                  decimals={4}
-                  fontSize="20px"
-                  value={getBalanceNumber(amountTokenCommittedInLP, currency.decimals)}
-                />
-            <PercentageOfTotal
-              userAmount={amountTokenCommittedInLP}
-              totalAmount={totalAmount}
-            />
-            
-          </CommitTokenSection>
-          <TokenSection primaryToken={ifo.token}>
-      {
-        hasHarvest  && userPoolCharacteristics.userAllocation.gt(0) ?
-        <Label>{t('%symbol% Claimed', { symbol: token.symbol })} </Label>
-        :        
-        <Label>{t('%symbol% to claim', { symbol: token.symbol })}</Label>
-      }
+    console.log('all data', walletIfoData[poolId])
 
-            <Value>{getBalanceNumber(userAllocation, token.decimals)}</Value>
-            {/* {version >= 3.2 && publicPoolCharacteristics.vestingInformation.percentage > 0 && (
+    return (
+      <>
+        <CommitTokenSection commitToken={ifo.currency} mb="24px">
+          <Flex>
+            <Label>{t('Your %symbol% spent', { symbol: currency.symbol })}</Label>
+            {tagTooltipVisibleOfSpent && tagTooltipOfSpent}
+            <span ref={tagTargetRefOfSpent}>
+              <HelpIcon ml="4px" width="15px" height="15px" color="textSubtle" />
+            </span>
+          </Flex>
+          <BalanceWithLoading
+            bold
+            decimals={4}
+            fontSize="20px"
+            value={getBalanceNumber(amountTokenCommittedInLP, currency.decimals)}
+          />
+          <PercentageOfTotal userAmount={amountTokenCommittedInLP} totalAmount={totalAmount} />
+        </CommitTokenSection>
+        <TokenSection primaryToken={ifo.token}>
+          {hasHarvest && userPoolCharacteristics.userAllocation.gt(0) ? (
+            <Label>{t('%symbol% Claimed', { symbol: token.symbol })} </Label>
+          ) : (
+            <Label>{t('%symbol% to claim', { symbol: token.symbol })}</Label>
+          )}
+
+          <Value>{getBalanceNumber(userAllocation, token.decimals)}</Value>
+          {/* {version >= 3.2 && publicPoolCharacteristics.vestingInformation.percentage > 0 && (
               <VestingAvailableToClaim
                 amountToReceive={offeringAmountInToken}
                 percentage={publicPoolCharacteristics.vestingInformation.percentage}
                 decimals={token.decimals}
               />
             )} */}
-          </TokenSection>
-          {message}
-        </>
-      )
- 
- 
+        </TokenSection>
+        {message}
+      </>
+    )
+
     if (publicIfoData.status === 'finished') {
       return amountTokenCommittedInLP.isEqualTo(0) ? (
         <Flex flexDirection="column" alignItems="center">
@@ -372,7 +373,6 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
           </CommitTokenSection>
           <TokenSection primaryToken={ifo.token}>
             <Label>
-              {' '}
               {hasClaimed
                 ? t('%symbol% received', { symbol: token.symbol })
                 : t('%symbol% to receive', { symbol: token.symbol })}

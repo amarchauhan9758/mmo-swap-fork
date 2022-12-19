@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react'
 import { useWeb3React } from '@pancakeswap/wagmi'
 import BigNumber from 'bignumber.js'
-import { Ifo, PoolIds } from 'config/constants/types'
+import { Ifo, Iwo, PoolIds } from 'config/constants/types'
 import { useERC20, useIfoV1Contract } from 'hooks/useContract'
 import { multicallv2 } from 'utils/multicall'
 import ifoV1Abi from 'config/abi/ifoV1.json'

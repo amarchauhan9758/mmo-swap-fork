@@ -1,5 +1,5 @@
-import useGetPublicIfoV1Data from 'views/Ifos/hooks/v1/useGetPublicIfoData'
-import useGetWalletIfoV1Data from 'views/Ifos/hooks/v1/useGetWalletIfoData'
+import useGetPublicIfoV1Data from 'views/Iwo/hooks/v1/useGetPublicIfoData'
+import useGetWalletIfoV1Data from 'views/Iwo/hooks/v1/useGetWalletIfoData'
 import { Ifo } from 'config/constants/types'
 import IfoFoldableCard from './IfoFoldableCard'
 

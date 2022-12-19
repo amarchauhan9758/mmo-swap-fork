@@ -38,8 +38,6 @@ const IfoCardActions: React.FC<React.PropsWithChildren<Props>> = ({
     return <ConnectWalletButton width="100%" />
   }
 
-  console.log('again check', userPoolCharacteristics.hasHarvest)
-
   const needClaim =
     !userPoolCharacteristics.hasHarvest &&
     userPoolCharacteristics.userAllocation.gt(0) &&
@@ -59,9 +57,9 @@ const IfoCardActions: React.FC<React.PropsWithChildren<Props>> = ({
     )
   }
 
-  if (userPoolCharacteristics.status != 'live') {
-    return userPoolCharacteristics.status
-  }
+  //   if (userPoolCharacteristics.status != 'live') {
+  //     return userPoolCharacteristics.status
+  //   }
 
   return (
     <>

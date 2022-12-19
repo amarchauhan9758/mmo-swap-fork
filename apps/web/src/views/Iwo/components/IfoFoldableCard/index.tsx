@@ -34,9 +34,9 @@ import { IfoRibbon } from './IfoRibbon'
 import { EnableStatus } from './types'
 
 interface IfoFoldableCardProps {
-  ifo: Iwo
-  publicIfoData: PublicIfoData
-  walletIfoData: WalletIfoData
+  ifo?: Iwo
+  publicIfoData?: PublicIfoData
+  walletIfoData?: WalletIfoData
 }
 
 const StyledCard = styled(Card)<{ $isCurrent?: boolean }>`
@@ -129,16 +129,7 @@ const NoHatBunny = ({ isLive, isCurrent }: { isLive?: boolean; isCurrent?: boole
   const { isXs, isSm, isMd } = useMatchBreakpoints()
   const isSmallerThanTablet = isXs || isSm || isMd
   if (isSmallerThanTablet && isLive) return null
-  return (
-    <StyledNoHatBunny $isLive={isLive} $isCurrent={isCurrent}>
-      <img
-        src={`/images/ifos/assets/bunnypop-${!isSmallerThanTablet ? 'right' : 'left'}.png`}
-        width={123}
-        height={162}
-        alt="bunny"
-      />
-    </StyledNoHatBunny>
-  )
+  return <StyledNoHatBunny $isLive={isLive} $isCurrent={isCurrent}></StyledNoHatBunny>
 }
 
 // Active Ifo
@@ -191,7 +182,7 @@ export const IfoCurrentCard = ({
             <ExpandableLabel expanded={isExpanded} onClick={() => setIsExpanded(!isExpanded)}>
               {isExpanded ? t('Hide') : t('Details')}
             </ExpandableLabel>
-            {isExpanded && <IfoAchievement ifo={ifo} publicIfoData={publicIfoData} />}
+            {/* {isExpanded && <IfoAchievement ifo={ifo} publicIfoData={publicIfoData} />} */}
           </StyledCardFooter>
         </StyledCard>
       </Box>
@@ -242,7 +233,7 @@ const IfoFoldableCard = ({
         </Box>
         <FoldableContent isVisible={isExpanded}>
           <IfoCard ifo={ifo} publicIfoData={publicIfoData} walletIfoData={walletIfoData} />
-          <IfoAchievement ifo={ifo} publicIfoData={publicIfoData} />
+          {/* <IfoAchievement ifo={ifo} publicIfoData={publicIfoData} /> */}
         </FoldableContent>
       </Box>
     </Box>

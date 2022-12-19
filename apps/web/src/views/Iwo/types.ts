@@ -12,7 +12,6 @@ export interface PoolCharacteristics {
   taxRate: number
   totalAmountPool: BigNumber
   sumTaxesOverflow: BigNumber
-  totalAmountGross: BigNumber
   // extends
   pointThreshold?: number
   admissionProfile?: string
@@ -23,24 +22,23 @@ export interface PoolCharacteristics {
 
 // IFO data unrelated to the user returned by useGetPublicIfoData
 export interface PublicIfoData {
-  isInitialized: boolean
-  status: IfoStatus
-  blocksRemaining: number
-  secondsUntilStart: number
-  progress: number
-  secondsUntilEnd: number
-  startBlockNum: number
-  endBlockNum: number
-  totalAmountGross: BigNumber
-  currencyPriceInUSD: BigNumber
-  numberPoints: number
-  thresholdPoints: EthersBigNumber
+  isInitialized?: boolean
+  status?: IfoStatus
+  blocksRemaining?: number
+  secondsUntilStart?: number
+  progress?: number
+  secondsUntilEnd?: number
+  startBlockNum?: number
+  endBlockNum?: number
+  currencyPriceInUSD?: BigNumber
+  numberPoints?: number
+  thresholdPoints?: EthersBigNumber
   plannedStartTime?: number
   vestingStartTime?: number
 
   fetchIfoData: (currentBlock: number) => Promise<void>
   [PoolIds.poolBasic]?: PoolCharacteristics
-  [PoolIds.poolUnlimited]: PoolCharacteristics
+  [PoolIds.poolUnlimited]?: PoolCharacteristics
 }
 
 export interface VestingInformation {
@@ -67,7 +65,7 @@ export interface UserPoolCharacteristics {
   vestingId?: string
   status: string
   vestingComputeReleasableAmount?: BigNumber
-  hasClaimed: any
+  hasClaimed: boolean
 }
 
 // Use only inside the useGetWalletIfoData hook
