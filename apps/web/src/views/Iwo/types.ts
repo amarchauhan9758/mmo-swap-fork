@@ -67,6 +67,7 @@ export interface UserPoolCharacteristics {
   vestingId?: string
   status: string
   vestingComputeReleasableAmount?: BigNumber
+  hasClaimed: any
 }
 
 // Use only inside the useGetWalletIfoData hook

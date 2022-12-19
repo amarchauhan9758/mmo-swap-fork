@@ -56,10 +56,11 @@ export interface Ifo {
   vestingTitle?: string
   cIFO?: boolean
   plannedStartTime?: number
+  subTitle?: string
+  launchDate?: number
   [PoolIds.poolBasic]?: IfoPoolInfo
   [PoolIds.poolUnlimited]: IfoPoolInfo
 }
-
 
 export interface Iwo {
   id: string
