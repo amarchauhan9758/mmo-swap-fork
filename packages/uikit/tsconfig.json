@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["dom", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
+    // "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
