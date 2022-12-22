@@ -16,8 +16,6 @@ import { getStatus } from '../helpers'
 import { useChainCurrentBlock, useCurrentBlock } from 'state/block/hooks'
 import { useBlockNumber, useNetwork } from 'wagmi'
 
- 
-
 const initialState = {
   isInitialized: false,
   poolBasic: {
@@ -43,8 +41,6 @@ const initialState = {
     totalAmount: BIG_ZERO,
   },
 }
- 
-
 
 /**
  * Gets all data from an IFO related to a wallet
@@ -54,8 +50,7 @@ const useGetWalletIwoData = (ifo: Iwo): WalletIfoData => {
   const dispatch = useAppDispatch()
   const credit = useIfoCredit()
 
-  const { address, currency, version   } = ifo
- 
+  const { address, currency, version } = ifo
 
   const { account } = useWeb3React()
   const contract = useIwoContract(address)
@@ -81,23 +76,21 @@ const useGetWalletIwoData = (ifo: Iwo): WalletIfoData => {
     }))
   }
 
-  const fetchIfoData = useCallback(
-    async () => {
+  const fetchIfoData = useCallback(async () => {
+    const iwoCalls = ['userInfo', 'getRefundingAmount', 'getOfferingAmount', 'getUserAllocation', 'hasHarvest'].map(
+      (method) => ({
+        address,
+        name: method,
+        params: [account],
+      }),
+    )
 
-
-    const iwoCalls = ['userInfo','getRefundingAmount','getOfferingAmount','getUserAllocation','hasHarvest'].map((method) => ({
+    const iwoCalls2 = ['endBlock', 'offeringAmount', 'raisingAmount', 'startBlock', 'totalAmount'].map((method) => ({
       address,
       name: method,
-      params: [account],
     }))
 
-    const iwoCalls2 = ['endBlock' , 'offeringAmount' , 'raisingAmount' ,  'startBlock' , 'totalAmount' ].map((method) => ({
-      address,
-      name: method,
-    }))
-
-    
-// alert(_currentBlock);
+    // alert(_currentBlock);
     dispatch(fetchCakeVaultUserData({ account }))
 
     const [
@@ -110,56 +103,50 @@ const useGetWalletIwoData = (ifo: Iwo): WalletIfoData => {
       offeringAmount,
       raisingAmount,
       startblock,
-      totalAmount
-    ] = await multicallv2({ abi: iwoAbi, calls: [...iwoCalls,...iwoCalls2], options: { requireSuccess: false } })
+      totalAmount,
+    ] = await multicallv2({ abi: iwoAbi, calls: [...iwoCalls, ...iwoCalls2], options: { requireSuccess: false } })
 
-
-    const startBlockNum = startblock  
-    const endBlockNum = endblock  
+    const startBlockNum = startblock
+    const endBlockNum = endblock
 
     const startTime = ifo.plannedStartTime
     const endTime = ifo.plannedEndTime
-    
+
     const currentTime = Date.now() / 1000
 
-    const status = getStatus(currentTime, startTime, endTime)  
- console.log("check harvets" , hasHarvest)
+    const status = getStatus(currentTime, startTime, endTime)
+    console.log('check harvets', hasHarvest)
     setState((prevState) => ({
       ...prevState,
       isInitialized: true,
       poolBasic: {
         ...prevState.poolBasic,
-          endBlock: endBlockNum.toString(),
-          amountTokenCommittedInLP:  new BigNumber(userInfo[0].toString()),
-          refundingAmountInLP:  new BigNumber(getRefundingAmount.toString()),
-          hasHarvest: hasHarvest[0],
-          userAllocation: new BigNumber(getOfferingAmount.toString()),
-          offeringAmountInToken:  new BigNumber(offeringAmount.toString()),
-          raisingAmount:  new BigNumber(raisingAmount.toString()),
-          startblock: startBlockNum.toString(),
-          totalAmount: new BigNumber(totalAmount.toString()),
-          status: status
-
+        endBlock: endBlockNum.toString(),
+        amountTokenCommittedInLP: new BigNumber(userInfo[0].toString()),
+        refundingAmountInLP: new BigNumber(getRefundingAmount.toString()),
+        hasHarvest: hasHarvest[0],
+        userAllocation: new BigNumber(getOfferingAmount.toString()),
+        offeringAmountInToken: new BigNumber(offeringAmount.toString()),
+        raisingAmount: new BigNumber(raisingAmount.toString()),
+        startblock: startBlockNum.toString(),
+        totalAmount: new BigNumber(totalAmount.toString()),
+        status: status,
       },
       poolUnlimited: {
         ...prevState.poolUnlimited,
         endBlock: endBlockNum.toString(),
-        amountTokenCommittedInLP:  new BigNumber(userInfo[0].toString()),
-        refundingAmountInLP:  new BigNumber(getRefundingAmount.toString()),
+        amountTokenCommittedInLP: new BigNumber(userInfo[0].toString()),
+        refundingAmountInLP: new BigNumber(getRefundingAmount.toString()),
         hasHarvest: hasHarvest[0],
         userAllocation: new BigNumber(getOfferingAmount.toString()),
-        offeringAmountInToken:  new BigNumber(offeringAmount.toString()),
-        raisingAmount:  new BigNumber(raisingAmount.toString()),
+        offeringAmountInToken: new BigNumber(offeringAmount.toString()),
+        raisingAmount: new BigNumber(raisingAmount.toString()),
         startblock: startBlockNum.toString(),
         totalAmount: new BigNumber(totalAmount.toString()),
-        status: status
-
-
+        status: status,
       },
     }))
   }, [account, address, dispatch, version])
-
-
 
   const resetIfoData = useCallback(() => {
     setState({ ...initialState })

@@ -8,7 +8,7 @@ export const cakeBnbLpToken = new ERC20Token(ChainId.MATIC, CAKE_BNB_LP_MAINNET,
 const iwos: Iwo[] = [
   {
     id: 'k1',
-    address: '0x5393cd3fB7375E783a2545f47cDC359093b09573',
+    address: '0x0BE8EB557B39e473e7c1EC340f17c2133ad18302',
     // address: '0x164DeBe6264393b4b0cD794Ac7A966B771c19e42',
     isActive: false,
     name: 'TEST IWO',
@@ -26,8 +26,7 @@ const iwos: Iwo[] = [
     token: maticTokens.dttoken,
     releaseBlockNumber: 4086064,
     campaignId: '511900000',
-    articleUrl:
-      '#',
+    articleUrl: '#',
     tokenOfferingPrice: 1,
     version: 3.2,
     twitterUrl: '#',
@@ -55,8 +54,7 @@ const iwos: Iwo[] = [
     token: maticTokens.dttoken,
     releaseBlockNumber: 4086064,
     campaignId: '511900000',
-    articleUrl:
-      '#',
+    articleUrl: '#',
     tokenOfferingPrice: 1,
     version: 3.2,
     twitterUrl: '#',
@@ -113,7 +111,6 @@ const iwos: Iwo[] = [
   //     'Earn $MGP by converting $WOM and providing liquidities; Lock $MGP to share revenue and receive bribes.',
   // },
 
-
   // {
   //   id: 'k1',
   //   address: '0x29C8D8A01BaD3BA8CE33FDe4A1ac0AE93ec42D2F',
@@ -135,9 +132,6 @@ const iwos: Iwo[] = [
   //   tokenDecimals: 18,
   //   releaseBlockNumber: 4086064,
   // },
-
-
-
 
   // {
   //   id: 'wmx',

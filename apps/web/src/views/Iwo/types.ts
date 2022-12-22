@@ -35,7 +35,6 @@ export interface PublicIfoData {
   thresholdPoints?: EthersBigNumber
   plannedStartTime?: number
   vestingStartTime?: number
-
   fetchIfoData: (currentBlock: number) => Promise<void>
   [PoolIds.poolBasic]?: PoolCharacteristics
   [PoolIds.poolUnlimited]?: PoolCharacteristics
@@ -50,22 +49,24 @@ export interface VestingInformation {
 
 // User specific pool characteristics
 export interface UserPoolCharacteristics {
-  amountTokenCommittedInLP: BigNumber // @contract: amountPool
-  totalAmount: BigNumber // @contract: amountPool
-  userAllocation: BigNumber // @contract: amountPool
-  offeringAmountInToken: BigNumber // @contract: userOfferingAmountPool
-  raisingAmount: BigNumber // @contract: userOfferingAmountPool
-  refundingAmountInLP: BigNumber // @contract: userRefundingAmountPool
-  taxAmountInLP: BigNumber // @contract: userTaxAmountPool
-  hasHarvest: boolean // @contract: claimedPool
-  isPendingTx: boolean
+  amountTokenCommittedInLP?: BigNumber // @contract: amountPool
+  totalAmount?: BigNumber // @contract: amountPool
+  userAllocation?: BigNumber // @contract: amountPool
+  offeringAmountInToken?: BigNumber // @contract: userOfferingAmountPool
+  raisingAmount?: BigNumber // @contract: userOfferingAmountPool
+  refundingAmountInLP?: BigNumber // @contract: userRefundingAmountPool
+  taxAmountInLP?: BigNumber // @contract: userTaxAmountPool
+  hasHarvest?: boolean // @contract: claimedPool
+  isPendingTx?: boolean
   vestingReleased?: BigNumber
   vestingAmountTotal?: BigNumber
   isVestingInitialized?: boolean
   vestingId?: string
-  status: string
+  status?: string
   vestingComputeReleasableAmount?: BigNumber
-  hasClaimed: boolean
+  hasClaimed?: boolean
+  endBlock?: BigNumber
+  startBlock?: BigNumber
 }
 
 // Use only inside the useGetWalletIfoData hook

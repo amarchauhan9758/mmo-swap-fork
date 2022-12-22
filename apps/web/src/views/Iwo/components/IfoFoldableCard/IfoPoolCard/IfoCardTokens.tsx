@@ -149,6 +149,7 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
     totalAmount,
     userAllocation,
     hasHarvest,
+    hasClaimed,
   } = userPoolCharacteristics
   const spentAmount = +amountTokenCommittedInLP - +refundingAmountInLP
 
