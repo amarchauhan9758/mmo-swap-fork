@@ -8,7 +8,7 @@ export const cakeBnbLpToken = new ERC20Token(ChainId.MATIC, CAKE_BNB_LP_MAINNET,
 const iwos: Iwo[] = [
   {
     id: 'k1',
-    address: '0x0BE8EB557B39e473e7c1EC340f17c2133ad18302',
+    address: '0x2d8789D27a107068444345b4495fdD1a347eBa93',
     // address: '0x164DeBe6264393b4b0cD794Ac7A966B771c19e42',
     isActive: false,
     name: 'TEST IWO',
