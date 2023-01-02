@@ -3,7 +3,7 @@ import { bscTokens, maticTokens } from '@pancakeswap/tokens'
 import { CAKE_BNB_LP_MAINNET } from './lp'
 import { Ifo } from './types'
 
-export const cakeBnbLpToken = new ERC20Token(ChainId.BSC, CAKE_BNB_LP_MAINNET, 18, 'CAKE-BNB LP')
+export const cakeBnbLpToken = new ERC20Token(ChainId.BSC, CAKE_BNB_LP_MAINNET, 18, 'MMO-MATIC LP')
 
 const ifos: Ifo[] = [
   {
@@ -63,7 +63,6 @@ const ifos: Ifo[] = [
   //     'Earn $MGP by converting $WOM and providing liquidities; Lock $MGP to share revenue and receive bribes.',
   // },
 
-
   // {
   //   id: 'k1',
   //   address: '0x29C8D8A01BaD3BA8CE33FDe4A1ac0AE93ec42D2F',
@@ -85,9 +84,6 @@ const ifos: Ifo[] = [
   //   tokenDecimals: 18,
   //   releaseBlockNumber: 4086064,
   // },
-
-
-
 
   // {
   //   id: 'wmx',

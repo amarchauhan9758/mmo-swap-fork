@@ -11,6 +11,8 @@ import { HistoryManagerProvider } from 'contexts/HistoryContext'
 
 const StyledUIKitProvider: React.FC<React.PropsWithChildren> = ({ children, ...props }) => {
   const { resolvedTheme } = useNextTheme()
+
+  // console.log(resolvedTheme, 'theme')
   return (
     <UIKitProvider theme={resolvedTheme === 'dark' ? dark : light} {...props}>
       {children}

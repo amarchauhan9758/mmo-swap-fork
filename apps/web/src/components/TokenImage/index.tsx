@@ -5,7 +5,7 @@ import {
   ImageProps,
 } from '@pancakeswap/uikit'
 import { Token, ChainId } from '@pancakeswap/sdk'
- 
+
 interface TokenPairImageProps extends Omit<UIKitTokenPairImageProps, 'primarySrc' | 'secondarySrc'> {
   primaryToken: Token
   secondaryToken: Token
@@ -17,9 +17,9 @@ const getImageUrlFromToken = (token: Token) => {
   if (token.chainId !== ChainId.BSC) {
     return `/images/${token.chainId}/tokens/${address}.png`
   }
-  return `/images/tokens/${address}.png`  
+  return `/images/137/tokens/${address}.png`
 }
- 
+
 export const TokenPairImage: React.FC<React.PropsWithChildren<TokenPairImageProps>> = ({
   primaryToken,
   secondaryToken,

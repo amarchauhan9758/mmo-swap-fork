@@ -53,7 +53,7 @@ interface Props {
 const multiplierValues = [0.1, 0.25, 0.5, 0.75, 1]
 
 // Default value for transaction setting, tweak based on BSC network congestion.
-const gasPrice = parseUnits('100000', 'gwei').toString()
+const gasPrice = parseUnits('100', 'gwei').toString()
 
 const HasVestingNotice: React.FC<React.PropsWithChildren<{ url: string }>> = ({ url }) => {
   const { t } = useTranslation()
@@ -120,14 +120,9 @@ const ContributeModal: React.FC<React.PropsWithChildren<Props>> = ({
         )
       },
       onConfirm: () => {
-        return callWithMarketGasPrice(
-          contract,
-          'deposit',
-          [valueWithTokenDecimals.toString()],
-          {
-            gasPrice,
-          },
-        )
+        return callWithMarketGasPrice(contract, 'deposit', [valueWithTokenDecimals.toString()], {
+          gasPrice,
+        })
       },
       onSuccess: async ({ receipt }) => {
         await onSuccess(valueWithTokenDecimals, receipt.transactionHash)
@@ -176,8 +171,7 @@ const ContributeModal: React.FC<React.PropsWithChildren<Props>> = ({
     {},
   )
 
-  const isWarning =
-    valueWithTokenDecimals.isGreaterThan(userCurrencyBalance) 
+  const isWarning = valueWithTokenDecimals.isGreaterThan(userCurrencyBalance)
 
   return (
     <Modal title={t('Contribute %symbol%', { symbol: currency.symbol })} onDismiss={onDismiss}>
@@ -199,7 +193,6 @@ const ContributeModal: React.FC<React.PropsWithChildren<Props>> = ({
                     ? '/images/cake.svg'
                     : `/images/${currency.chainId}/tokens/${currency.address}.svg`
                 }
-               
                 width={24}
                 height={24}
               />

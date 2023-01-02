@@ -11,7 +11,7 @@ export default {
 const Template: React.FC<React.PropsWithChildren<ThemeSwitcherProps>> = ({ ...args }) => {
   return (
     <Flex p="10px">
-      <ThemeSwitcher {...args} />
+      <ThemeSwitcher {...args} />{" "}
     </Flex>
   );
 };

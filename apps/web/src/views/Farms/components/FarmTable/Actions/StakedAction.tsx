@@ -187,7 +187,6 @@ const Staked: React.FunctionComponent<React.PropsWithChildren<StackedActionProps
     chainId,
   })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
-
   const isStakeReady = useMemo(() => {
     return ['history', 'archived'].some((item) => router.pathname.includes(item)) || pendingFarm.length > 0
   }, [pendingFarm, router])

@@ -1,6 +1,8 @@
 import { useState, useCallback } from 'react'
 import { useWeb3React } from '@pancakeswap/wagmi'
 import BigNumber from 'bignumber.js'
+import { useChainCurrentBlock, useCurrentBlock } from 'state/block/hooks'
+import { useBlockNumber, useNetwork } from 'wagmi'
 import { Iwo, PoolIds } from 'config/constants/types'
 import { useERC20, useIfoV3Contract, useIwoContract } from 'hooks/useContract'
 import { multicallv2 } from 'utils/multicall'
@@ -13,8 +15,6 @@ import { BIG_ZERO } from '@pancakeswap/utils/bigNumber'
 import useIfoAllowance from '../useIfoAllowance'
 import { WalletIfoState, WalletIfoData } from '../../types'
 import { getStatus } from '../helpers'
-import { useChainCurrentBlock, useCurrentBlock } from 'state/block/hooks'
-import { useBlockNumber, useNetwork } from 'wagmi'
 
 const initialState = {
   isInitialized: false,

@@ -17,7 +17,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 2,
     v1pid: 251,
-    lpSymbol: 'CAKE-BNB LP',
+    lpSymbol: 'MMO-MATIC LP',
     lpAddress: CAKE_BNB_LP_MAINNET,
     token: bscTokens.cake,
     quoteToken: bscTokens.wbnb,
@@ -26,7 +26,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 39,
     v1pid: 389,
-    lpSymbol: 'CAKE-BUSD LP',
+    lpSymbol: 'MMO-USDC LP',
     lpAddress: '0x804678fa97d91B974ec2af3c843270886528a9E6',
     boosted: true,
     token: bscTokens.cake,
