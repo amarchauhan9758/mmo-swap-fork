@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-boolean-value */
 import { useMemo } from 'react'
 import useGetPublicIfoV3Data from 'views/Iwo/hooks/v3/useGetPublicIwoData'
 import useGetWalletIfoV3Data from 'views/Iwo/hooks/v3/useGetWalletIwoData'

@@ -7,17 +7,11 @@ declare module 'styled-components' {
 }
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-      font-family: Thedus;
-      src: url(Thedus);
-    }
-    
   * {
-    font-family: 'Thedus';
+    font-family: 'Kanit', sans-serif;
   }
   body {
     background-color: ${({ theme }) => theme.colors.background};
-
     img {
       height: auto;
       max-width: 100%;

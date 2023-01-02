@@ -187,6 +187,7 @@ const IfoCardDetails: React.FC<React.PropsWithChildren<IfoCardDetailsProps>> = (
 
   /* Format end */
   const renderBasedOnIfoStatus = () => {
+    // eslint-disable-next-line no-restricted-globals
     if (status === 'coming_soon') {
       return (
         <>
@@ -247,29 +248,29 @@ const IfoCardDetails: React.FC<React.PropsWithChildren<IfoCardDetailsProps>> = (
       </>
     )
 
-    if (status === 'finished') {
-      return (
-        <>
-          {(poolId === PoolIds.poolBasic || ifo.isActive) && tokenEntry}
-          {poolId === PoolIds.poolUnlimited && <FooterEntry label={t('Additional fee:')} value={taxRate} />}
-          <FooterEntry label={t('Total committed:')} value={currencyPriceInUSD > 0 ? totalCommitted : null} />
-          <FooterEntry label={t('Funds to raise:')} value={ifo[poolId].raiseAmount} />
-          {raisingTokenToBurn && <FooterEntry label={t('CAKE to burn:')} value={raisingTokenToBurn} />}
-          {ifo.version > 1 && (
-            <FooterEntry
-              label={t('Price per %symbol%:', { symbol: ifo.token.symbol })}
-              value={`$${ifo.tokenOfferingPrice ? ifo.tokenOfferingPrice : '?'}`}
-            />
-          )}
-          {ifo.version > 1 && poolId === PoolIds.poolUnlimited && (
-            <FooterEntry
-              label={t('Price per %symbol% with fee:', { symbol: ifo.token.symbol })}
-              value={pricePerTokenWithFee}
-            />
-          )}
-        </>
-      )
-    }
+    // if (status === 'finished') {
+    //   return (
+    //     <>
+    //       {(poolId === PoolIds.poolBasic || ifo.isActive) && tokenEntry}
+    //       {poolId === PoolIds.poolUnlimited && <FooterEntry label={t('Additional fee:')} value={taxRate} />}
+    //       <FooterEntry label={t('Total committed:')} value={currencyPriceInUSD > 0 ? totalCommitted : null} />
+    //       <FooterEntry label={t('Funds to raise:')} value={ifo[poolId].raiseAmount} />
+    //       {raisingTokenToBurn && <FooterEntry label={t('CAKE to burn:')} value={raisingTokenToBurn} />}
+    //       {ifo.version > 1 && (
+    //         <FooterEntry
+    //           label={t('Price per %symbol%:', { symbol: ifo.token.symbol })}
+    //           value={`$${ifo.tokenOfferingPrice ? ifo.tokenOfferingPrice : '?'}`}
+    //         />
+    //       )}
+    //       {ifo.version > 1 && poolId === PoolIds.poolUnlimited && (
+    //         <FooterEntry
+    //           label={t('Price per %symbol% with fee:', { symbol: ifo.token.symbol })}
+    //           value={pricePerTokenWithFee}
+    //         />
+    //       )}
+    //     </>
+    //   )
+    // }
     return <SkeletonCardDetails />
   }
 

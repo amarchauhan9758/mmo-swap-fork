@@ -41,7 +41,7 @@ const IfoCardActions: React.FC<React.PropsWithChildren<Props>> = ({
   const needClaim =
     !userPoolCharacteristics.hasHarvest &&
     userPoolCharacteristics.userAllocation.gt(0) &&
-    userPoolCharacteristics.status == 'finished'
+    userPoolCharacteristics.status === 'finished'
 
   if (needClaim) {
     return <ClaimButton poolId={poolId} ifoVersion={ifo.version} walletIfoData={walletIfoData} />
