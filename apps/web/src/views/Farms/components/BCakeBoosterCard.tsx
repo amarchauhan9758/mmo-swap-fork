@@ -77,7 +77,7 @@ export const useBCakeTooltipContent = () => {
       </Box>
       <Box>
         {t('To learn more, check out the')}
-        <Link target="_blank" href="#">
+        <Link target="_blank" href="/#">
           {t('Medium Article')}
         </Link>
       </Box>

@@ -129,7 +129,7 @@ const NoHatBunny = ({ isLive, isCurrent }: { isLive?: boolean; isCurrent?: boole
   const { isXs, isSm, isMd } = useMatchBreakpoints()
   const isSmallerThanTablet = isXs || isSm || isMd
   if (isSmallerThanTablet && isLive) return null
-  return <StyledNoHatBunny $isLive={isLive} $isCurrent={isCurrent}></StyledNoHatBunny>
+  return <StyledNoHatBunny $isLive={isLive} $isCurrent={isCurrent}/>
 }
 
 // Active Ifo

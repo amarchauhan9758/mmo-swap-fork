@@ -130,7 +130,7 @@ const useGetWalletIwoData = (ifo: Iwo): WalletIfoData => {
         raisingAmount: new BigNumber(raisingAmount.toString()),
         startblock: startBlockNum.toString(),
         totalAmount: new BigNumber(totalAmount.toString()),
-        status: status,
+        status,
       },
       poolUnlimited: {
         ...prevState.poolUnlimited,
@@ -143,7 +143,7 @@ const useGetWalletIwoData = (ifo: Iwo): WalletIfoData => {
         raisingAmount: new BigNumber(raisingAmount.toString()),
         startblock: startBlockNum.toString(),
         totalAmount: new BigNumber(totalAmount.toString()),
-        status: status,
+        status,
       },
     }))
   }, [account, address, dispatch, version])

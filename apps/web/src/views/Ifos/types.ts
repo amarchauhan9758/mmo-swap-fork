@@ -36,7 +36,7 @@ export interface PublicIfoData {
   thresholdPoints: EthersBigNumber
   plannedStartTime?: number
   vestingStartTime?: number
-  totalAmountGross: BigNumber
+  totalAmountGross?: BigNumber
 
   fetchIfoData: (currentBlock: number) => Promise<void>
   [PoolIds.poolBasic]?: PoolCharacteristics
