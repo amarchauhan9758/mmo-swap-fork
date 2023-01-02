@@ -227,33 +227,35 @@ export const useCollectionNfts = (collectionAddress: string) => {
       return [collectionAddress, itemListingSettingsJson, pageIndex, 'collectionNfts']
     },
     async (address, settingsJson, page) => {
-      const settings: ItemListingSettings = JSON.parse(settingsJson)
-      const tokenIdsFromFilter = await fetchTokenIdsFromFilter(collection?.address, settings)
-      let newNfts: NftToken[] = []
-      if (settings.showOnlyNftsOnSale) {
-        newNfts = await fetchMarketDataNfts(collection, settings, page, tokenIdsFromFilter)
-      } else {
-        const {
-          nfts: allNewNfts,
-          fallbackMode: newFallbackMode,
-          fallbackPage: newFallbackPage,
-        } = await fetchAllNfts(
-          collection,
-          settings,
-          page,
-          tokenIdsFromFilter,
-          fetchedNfts.current,
-          fallbackMode.current,
-          fallbackModePage.current,
-        )
-        newNfts = allNewNfts
-        fallbackMode.current = newFallbackMode
-        fallbackModePage.current = newFallbackPage
-      }
-      if (newNfts.length < REQUEST_SIZE) {
-        isLastPage.current = true
-      }
-      return newNfts
+      // const settings: ItemListingSettings = JSON.parse(settingsJson)
+      // const tokenIdsFromFilter = await fetchTokenIdsFromFilter(collection?.address, settings)
+      // let newNfts: NftToken[] = []
+      // if (settings.showOnlyNftsOnSale) {
+      //   newNfts = await fetchMarketDataNfts(collection, settings, page, tokenIdsFromFilter)
+      // } else {
+      //   const {
+      //     nfts: allNewNfts,
+      //     fallbackMode: newFallbackMode,
+      //     fallbackPage: newFallbackPage,
+      //   } = await fetchAllNfts(
+      //     collection,
+      //     settings,
+      //     page,
+      //     tokenIdsFromFilter,
+      //     fetchedNfts.current,
+      //     fallbackMode.current,
+      //     fallbackModePage.current,
+      //   )
+      //   newNfts = allNewNfts
+      //   fallbackMode.current = newFallbackMode
+      //   fallbackModePage.current = newFallbackPage
+      // }
+      // if (newNfts.length < REQUEST_SIZE) {
+      //   isLastPage.current = true
+      // }
+
+      // return newNfts
+      return null;
     },
     { revalidateAll: true },
   )
