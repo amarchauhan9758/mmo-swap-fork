@@ -285,9 +285,8 @@ export const getCakeVaultV2Contract = (signer?: Signer | Provider) => {
 }
 
 export const getCakeFlexibleSideVaultV2Contract = (signer?: Signer | Provider) => {
+  console.log('flexibleSideVaultContract', signer)
 
-  console.log("flexibleSideVaultContract", signer);
-  
   return getContract({
     abi: cakeFlexibleSideVaultV2Abi,
     address: getCakeFlexibleSideVaultAddress(137),

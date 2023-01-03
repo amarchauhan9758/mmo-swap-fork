@@ -15,7 +15,7 @@ import { isAddress } from 'utils'
 import { pancakeBunniesAddress } from '../constants'
 
 const fetchMarketDataNfts = async (
-  bunnyId: string,
+  bunnyId: string | number,
   nftMetadata: ApiResponseCollectionTokens,
   direction: 'asc' | 'desc',
   page: number,
