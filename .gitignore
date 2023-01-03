@@ -37,7 +37,7 @@ yarn-debug.log*
 yarn-error.log*
 debug.log*
 
-**/apps/web/config/abi/types
+
 
 # Sentry
 .sentryclirc
