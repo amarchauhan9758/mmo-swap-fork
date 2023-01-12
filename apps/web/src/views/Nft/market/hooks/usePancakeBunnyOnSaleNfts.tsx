@@ -48,7 +48,7 @@ export const usePancakeBunnyOnSaleNfts = (
   itemsPerPage: number,
 ) => {
   const isLastPage = useRef(false)
-  const [direction, setDirection] = useState<'asc' | 'desc'>('asc' as const)
+  const [direction, setDirection] = useState<'asc' | 'desc'>('asc')
 
   useEffect(() => {
     isLastPage.current = false
