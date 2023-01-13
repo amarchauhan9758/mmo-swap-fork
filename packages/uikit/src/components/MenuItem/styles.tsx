@@ -29,7 +29,7 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   align-items: center;
   //box-shadow: ${({ $isActive }) => ($isActive ? "0px -1px 2px 1px #1be0aa, 0px -2px 3px 0px #1be0aa" : "")};
   //border-top: ${({ $isActive }) => ($isActive ? "1px solid #1be0aa" : "")};
-  color: ${({ theme, $isActive }) => ($isActive ? theme.colors.secondary : theme.colors.textSubtle)};
+  // color: ${({ theme, $isActive }) => ($isActive ? theme.colors.secondary : theme.colors.textSubtle)};
   font-size: 16px;
   font-weight: ${({ $isActive }) => ($isActive ? "600" : "400")};
   opacity: ${({ $isDisabled }) => ($isDisabled ? 0.5 : 1)};

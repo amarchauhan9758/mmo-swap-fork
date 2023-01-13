@@ -43,7 +43,7 @@ const SalesSection: React.FC<React.PropsWithChildren<SalesSectionProps>> = (prop
           alignSelf={['flex-start', null, null, 'center']}
         >
           <ColoredWordHeading text={headingText} color="#1BE0AA" />
-          <Text color="textSubtle" mb="24px">
+          <Text color="white" mb="24px">
             {bodyText}
           </Text>
           <Flex>
