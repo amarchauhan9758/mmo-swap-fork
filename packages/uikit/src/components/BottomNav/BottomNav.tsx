@@ -27,6 +27,7 @@ const BottomNav: React.FC<React.PropsWithChildren<BottomNavProps>> = ({
             const statusColor = menuItems?.find((menuItem) => menuItem.status !== undefined)?.status?.color;
             return (
               showOnMobile && (
+             
                 <DropdownMenu
                   key={`${label}#${href}`}
                   items={menuItems}
@@ -45,7 +46,7 @@ const BottomNav: React.FC<React.PropsWithChildren<BottomNavProps>> = ({
                         isActive={href === activeItem}
                         label={label}
                         icon={icon}
-                        fillIcon={fillIcon}
+                        // fillIcon={fillIcon}
                         showItemsOnMobile={showItemsOnMobile}
                       />
                     </NotificationDot>

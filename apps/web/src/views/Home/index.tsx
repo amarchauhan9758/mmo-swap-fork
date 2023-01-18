@@ -20,6 +20,7 @@ import CakeDataRow from './components/CakeDataRow'
 import { WedgeTopLeft, InnerWedgeWrapper, OuterWedgeWrapper, WedgeTopRight } from './components/WedgeSvgs'
 import UserBanner from './components/UserBanner'
 import MultipleBanner from './components/Banners/MultipleBanner'
+import YieldSection from './components/YieldSection'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;
@@ -99,7 +100,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         {/* <MultipleBanner /> */}
         <Hero />
       </StyledHeroSection>
-      <PageSection
+      {/* <PageSection
         innerProps={{ style: { margin: '0', width: '100%' } }}
         containerProps={{
           id: 'home-2',
@@ -108,7 +109,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         hasCurvedDivider={false}
       >
         <MetricsSection />
-      </PageSection>
+      </PageSection> */}
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.background}
@@ -142,6 +143,18 @@ const Home: React.FC<React.PropsWithChildren> = () => {
       </PageSection>
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
+        background={theme.colors.background}
+        index={2}
+        hasCurvedDivider={false}
+      >
+        
+      <YieldSection/>
+        {/* TODO: until we are enable fetch multi-chain farms */}
+       
+      </PageSection>
+
+      {/* <PageSection
+        innerProps={{ style: HomeSectionContainerStyles }}
         containerProps={{
           id: 'home-3',
         }}
@@ -149,8 +162,8 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         hasCurvedDivider={false}
       >
         <WinSection />
-      </PageSection>
-      <PageSection
+      </PageSection> */}
+      {/* <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.background}
         index={2}
@@ -158,7 +171,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
       >
         <MMOSection {...cakeSectionData(t)} />
         <CakeDataRow />
-      </PageSection>
+      </PageSection> */}
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background=" linear-gradient(90deg, #20065B 1.04%, #1BE0AA 100%)"

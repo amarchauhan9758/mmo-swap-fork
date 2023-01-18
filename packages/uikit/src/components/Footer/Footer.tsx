@@ -35,6 +35,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
   const isMounted = useIsMounted();
 
   return (
+    <>
     <StyledFooter
       data-theme="dark"
       p={["40px 16px", null, "56px 40px 32px 40px"]}
@@ -81,7 +82,7 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
           </Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
-        <StyledToolsContainer
+        {/* <StyledToolsContainer
           data-theme="dark"
           order={[1, null, 3]}
           flexDirection={["column", null, "row"]}
@@ -89,15 +90,15 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
         >
           <Flex order={[2, null, 1]} alignItems="center">
             <SkeletonV2 variant="round" width="56px" height="32px" isDataReady={isMounted}>
-              {/* <ThemeSwitcher isDark={true} toggleTheme={toggleTheme} /> */}
+              <ThemeSwitcher isDark={true} toggleTheme={toggleTheme} />
             </SkeletonV2>
-            {/* <LangSelector
+            <LangSelector
               currentLang={currentLang}
               langs={langs}
               setLang={setLang}
               color="textSubtle"
               dropdownPosition="top-right"
-            /> */}
+            />
           </Flex>
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             <Box mr="20px">
@@ -114,9 +115,11 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
               {buyCakeLabel}
             </Button>
           </Flex>
-        </StyledToolsContainer>
+        </StyledToolsContainer> */}
       </Flex>
     </StyledFooter>
+
+</>
   );
 };
 

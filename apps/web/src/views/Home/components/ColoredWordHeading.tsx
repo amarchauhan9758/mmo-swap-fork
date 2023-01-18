@@ -22,7 +22,7 @@ const ColoredWordHeading: React.FC<React.PropsWithChildren<HeadingProps>> = ({
 
   return (
     <Heading scale="xl" mb={mb} {...props} textTransform="uppercase">
-      <h1 style={{ color: '#fff' }}>{firstWord} </h1>
+      <h1 style={{ color: '#fff' , fontFamily:'myHeadingFont' }}>{firstWord} </h1>
       {remainingWords}
     </Heading>
   )

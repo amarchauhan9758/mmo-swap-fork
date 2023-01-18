@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, NextLinkFromReactRouter } from '@pancakeswap/uikit'
+import { Button, Flex, Heading,  Text, NextLinkFromReactRouter } from '@pancakeswap/uikit'
 import { useWeb3React } from '@pancakeswap/wagmi'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import { useTranslation } from '@pancakeswap/localization'
@@ -141,14 +141,14 @@ const Hero = () => {
           </StarsWrapper> */}
         </Flex>
         <Flex flex="1" flexDirection="column">
-          <Heading scale="xxl" color="secon dary" mb="8px">
-            {t('TRUSTED BY MILLIONS')}
+          <Heading  scale="xl" color="secon dary" mb="8px">
+            {t('YOUR LEADING WEB3 GAMES HUB')}
           </Heading>
-          <Heading scale="md" mb="24px">
+          <Text fontFamily="myFirstFont"  mb="24px">
             {t(
-              `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy `,
+              `MMO Swap is your premier Decentralized Exchange (DEX) on Polygon Network, advancing the gaming industry through Web3 integration. `,
             )}
-          </Heading>
+          </Text>
           <Flex>
             {!account && <ConnectWalletButton mr="8px">Buy Now</ConnectWalletButton>}
             <NextLinkFromReactRouter to="/swap">
@@ -161,4 +161,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;

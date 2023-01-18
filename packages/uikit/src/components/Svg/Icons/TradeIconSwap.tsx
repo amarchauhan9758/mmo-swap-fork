@@ -1,0 +1,15 @@
+import React from "react";
+import Svg from "../Svg";
+import { SvgProps } from "../types";
+
+const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
+  return (
+    <Svg width="18" height="18" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+<path fillRule="evenodd" clipRule="evenodd" d="M32.781 7H42C54.7025 7 65 17.2975 65 30V42C65 53.1655 57.0438 62.4728 46.4915 64.5617V42.2828L53.665 48.7083C55.1049 49.998 57.3176 49.8763 58.6073 48.4364C59.897 46.9966 59.7753 44.7839 58.3354 43.4942L39.4915 26.6153L39.4915 65H30C17.2975 65 7 54.7025 7 42V30C7 18.7374 15.0951 9.3656 25.7842 7.3855L26.0168 32.6321L18.9162 26.2719C17.4764 24.9822 15.2636 25.104 13.9739 26.5438C12.6842 27.9837 12.806 30.1964 14.2458 31.4861L33.1627 48.4302L32.781 7ZM0 30C0 13.4315 13.4315 0 30 0H42C58.5685 0 72 13.4315 72 30V42C72 58.5685 58.5685 72 42 72H30C13.4315 72 0 58.5685 0 42V30Z" fill="#1BE0AA"/>
+</Svg>
+
+   
+  );
+};
+
+export default Icon;

@@ -11,6 +11,11 @@ import {
   NftFillIcon,
   MoreIcon,
   DropdownMenuItems,
+  TradeIcon,
+  TradeIconSwap,
+  EarnIconSwap,
+  NFTIconSwap,
+  WinIconSwap
 } from '@pancakeswap/uikit'
 import { ContextApi } from '@pancakeswap/localization'
 import { nftsBaseUrl } from 'views/Nft/market/constants'
@@ -43,9 +48,11 @@ const config: (
   chainId?: number,
 ) => ConfigMenuItemsType[] = (t, isDark, languageCode, chainId) =>
   [
+
+    
     {
       label: t('Trade'),
-      icon: SwapIcon,
+      icon: TradeIconSwap,
       fillIcon: SwapFillIcon,
       href: '/swap',
       showItemsOnMobile: false,
@@ -82,7 +89,7 @@ const config: (
     {
       label: t('Earn'),
       href: '/farms',
-      icon: EarnIcon,
+      icon: EarnIconSwap,
       fillIcon: EarnFillIcon,
       image: '/images/decorations/pe2.png',
       items: [
@@ -100,7 +107,7 @@ const config: (
     {
       label: t('Win'),
       href: '/prediction',
-      icon: TrophyIcon,
+      icon: WinIconSwap,
       fillIcon: TrophyFillIcon,
       supportChainIds: SUPPORT_ONLY_BSC,
       items: [
@@ -159,12 +166,12 @@ const config: (
           label: t('Info'),
           href: '/info',
         },
-        {
-          label: t('IWO'),
-          href: '/iwo',
-          supportChainIds: SUPPORT_ONLY_BSC,
-          image: '/images/ifos/ifo-bunny.png',
-        },
+        // {
+        //   label: t('IWO'),
+        //   href: '/iwo',
+        //   supportChainIds: SUPPORT_ONLY_BSC,
+        //   image: '/images/ifos/ifo-bunny.png',
+        // },
         {
           label: t('Voting'),
           href: '/voting',
@@ -185,12 +192,12 @@ const config: (
         },
         {
           label: t('Blog'),
-          href: 'https://medium.com/pancakeswap',
+          href: '#',
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
         {
           label: t('Docs'),
-          href: 'https://docs.pancakeswap.finance',
+          href: '#',
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),

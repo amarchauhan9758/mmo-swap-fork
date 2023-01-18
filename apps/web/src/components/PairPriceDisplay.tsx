@@ -19,9 +19,10 @@ interface TokenDisplayProps extends FlexGapProps {
 const TextLabel = styled(Text)`
   font-size: 32px;
   line-height: 1.1;
+  font-family: myHeadingFont;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    font-size: 40px;
+    font-size: 28px;
   }
 `
 

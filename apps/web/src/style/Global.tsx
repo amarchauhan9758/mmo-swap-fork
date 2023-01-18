@@ -7,8 +7,17 @@ declare module 'styled-components' {
 }
 
 const GlobalStyle = createGlobalStyle`
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("/fonts/madetommyfont.otf");
+}
+@font-face {
+  font-family: myHeadingFont;
+  src: url("/fonts/fontbold.otf");
+}
   * {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'myFirstFont', sans-serif;
   }
   body {
     background-color: ${({ theme }) => theme.colors.background};

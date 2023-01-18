@@ -25,9 +25,11 @@ const Heading = styled(Text).attrs({ bold: true })<HeadingProps>`
   font-size: ${({ scale }) => style[scale || scales.MD].fontSize};
   font-weight: 600;
   line-height: 1.1;
+  font-family:"myHeadingFont";
 
   ${({ theme }) => theme.mediaQueries.lg} {
     font-size: ${({ scale }) => style[scale || scales.MD].fontSizeLg};
+    font-family:"myHeadingFont";
   }
 `;
 

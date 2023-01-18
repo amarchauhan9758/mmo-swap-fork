@@ -70,6 +70,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
   variant = variants.DEFAULT,
   children,
   disabled,
+  
   placement = "bottom-end",
   ...props
 }) => {

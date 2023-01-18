@@ -67,7 +67,7 @@ const FarmsPoolsRow = () => {
 
   return (
     <div ref={observerRef}>
-      <Flex flexDirection="column" mt="24px">
+      <Flex   flexDirection="column" mt="24px">
         <Flex mb="24px">
           <RowHeading text={showFarms ? t('Top Farms') : t('Top Syrup Pools')} />
           {chainId === ChainId.MATIC && (

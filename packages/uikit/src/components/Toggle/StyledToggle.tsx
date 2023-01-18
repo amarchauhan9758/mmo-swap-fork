@@ -38,8 +38,8 @@ const getScale =
   };
 
 export const Handle = styled.div<HandleProps>`
-  background-color: ${({ theme }) => theme.toggle.handleBackground};
-  //border-radius: 50%;
+  background-color: #1BE0AA;
+  // border-radius: 50%;
   cursor: pointer;
   height: ${getScale("handleHeight")};
   left: ${getScale("handleLeft")};
@@ -63,21 +63,21 @@ export const Input = styled.input<InputProps>`
   }
 
   &:focus + ${Handle} {
-    box-shadow: ${({ theme }) => theme.shadows.focus};
+    // box-shadow: ${({ theme }) => theme.shadows.focus};
   }
 
   &:hover + ${Handle}:not(:disabled):not(:checked) {
-    box-shadow: ${({ theme }) => theme.shadows.focus};
+    // box-shadow: ${({ theme }) => theme.shadows.focus};
   }
 `;
 
 const StyledToggle = styled.div<StyleToggleProps>`
   align-items: center;
-  background-color: ${({ theme, $checked, $checkedColor, $defaultColor }) =>
+  // background-color: ${({ theme, $checked, $checkedColor, $defaultColor }) =>
     theme.colors[$checked ? $checkedColor : $defaultColor]};
   //border-radius: 24px;
-  box-shadow: 0px -1px 2px 1px #1be0aa, 0px -2px 3px 0px #1be0aa;
-  box-shadow: ${({ theme }) => theme.shadows.inset};
+  // box-shadow: 0px -1px 2px 1px #1be0aa, 0px -2px 3px 0px #1be0aa;
+  // box-shadow: ${({ theme }) => theme.shadows.inset};
   cursor: pointer;
   display: inline-flex;
   height: ${getScale("toggleHeight")};

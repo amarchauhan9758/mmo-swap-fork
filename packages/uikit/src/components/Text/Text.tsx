@@ -15,6 +15,7 @@ const Text = styled.div<TextProps>`
   color: ${getColor};
   font-weight: ${({ bold }) => (bold ? 600 : 400)};
   line-height: 1.5;
+  // font-family:myHeadingFont;
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
   ${({ ellipsis }) =>
     ellipsis &&

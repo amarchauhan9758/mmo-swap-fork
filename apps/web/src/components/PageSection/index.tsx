@@ -95,6 +95,7 @@ const PageSection: React.FC<React.PropsWithChildren<PageSectionProps>> = ({
         <ChildrenWrapper {...innerProps}>{children}</ChildrenWrapper>
       </BackgroundColor>
       {hasCurvedDivider && dividerPosition === 'bottom' && (
+    
         <CurvedDivider
           svgFill={svgFill}
           index={index}

@@ -158,7 +158,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
               <Flex alignItems="center" height="100%">
                 <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
                   <LogoPricebutton>
-                    <CakePrice showSkeleton={true} cakePriceUsd={cakePriceUsd} />
+                    <CakePrice showSkeleton={false} cakePriceUsd={cakePriceUsd} />
                   </LogoPricebutton>
                 </AtomBox>
                 {/* <Box mt="4px">

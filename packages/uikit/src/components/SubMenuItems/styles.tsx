@@ -16,6 +16,7 @@ const StyledSubMenuItems = styled(Flex)`
   display: block;
   white-space: nowrap;
   scroll-behavior: smooth;
+  font-family:myHeadingFont;
   ${({ theme }) => theme.mediaQueries.md} {
     width: auto;
     display: flex;

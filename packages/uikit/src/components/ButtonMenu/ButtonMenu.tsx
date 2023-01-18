@@ -45,7 +45,7 @@ const StyledButtonMenu = styled.div<StyledButtonMenuProps>`
 
         & > button:disabled {
           background-color: transparent;
-          color: ${variant === variants.PRIMARY ? theme.colors.primary : theme.colors.textSubtle};
+           color: ${variant === variants.PRIMARY ? theme.colors.primary : theme.colors.textSubtle};
         }
     `;
     }
