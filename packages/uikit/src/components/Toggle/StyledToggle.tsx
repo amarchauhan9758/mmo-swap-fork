@@ -39,6 +39,7 @@ const getScale =
 
 export const Handle = styled.div<HandleProps>`
   background-color: #1BE0AA;
+  // border:2px solid red;
   // border-radius: 50%;
   cursor: pointer;
   height: ${getScale("handleHeight")};
@@ -63,11 +64,13 @@ export const Input = styled.input<InputProps>`
   }
 
   &:focus + ${Handle} {
-    // box-shadow: ${({ theme }) => theme.shadows.focus};
+    box-shadow:#1be0aa;
+    //  box-shadow: ${({ theme }) => theme.shadows.focus};
   }
 
   &:hover + ${Handle}:not(:disabled):not(:checked) {
-    // box-shadow: ${({ theme }) => theme.shadows.focus};
+    //  box-shadow: ${({ theme }) => theme.shadows.focus};
+    border:2px solid #1be0aa;
   }
 `;
 
@@ -84,7 +87,8 @@ const StyledToggle = styled.div<StyleToggleProps>`
   position: relative;
   transition: background-color 200ms;
   width: ${getScale("toggleWidth")};
-  box-shadow: 0px -2px 2px 0px #1be0aa, -1px -2px 2px 0px #1be0aa, 1px -2px 2px 0px #1be0aa;
+  border:2px solid #1be0aa;
+  // box-shadow: 0px -2px 2px 0px #1be0aa, -1px -2px 2px 0px #1be0aa, 1px -2px 2px 0px #1be0aa;
 `;
 
 export default StyledToggle;

@@ -34,6 +34,7 @@ const MenuItems: React.FC<React.PropsWithChildren<MenuItemsProps>> = ({
         );
       })}
     </Flex>
+    
   );
 };
 

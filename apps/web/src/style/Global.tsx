@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   src: url("/fonts/fontbold.otf");
 }
   * {
-    font-family: 'myFirstFont', sans-serif;
+    font-family: 'myFirstFont';
   }
   body {
     background-color: ${({ theme }) => theme.colors.background};
@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
       height: auto;
       max-width: 100%;
     }
+
+  // a{
+  //     font-family:"myHeadingFont";
+  //   }
   }
 `
 

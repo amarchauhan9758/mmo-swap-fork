@@ -49,6 +49,7 @@ const MenuItem: React.FC<React.PropsWithChildren<MenuItemProps>> = ({
       >
         {children}
       </StyledMenuItem>
+      <></>
     </StyledMenuItemContainer>
   );
 };

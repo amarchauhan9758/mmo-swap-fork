@@ -36,15 +36,17 @@ export default function SwapTab({ children, showStable }) {
           <ButtonMenu
             activeIndex={swapTypeState}
             onItemClick={() => {
-              setSwapType((state) => (state === SwapType.SWAP ? SwapType.STABLE_SWAP : SwapType.SWAP))
+              // setSwapType((state) => (state === SwapType.SWAP ? SwapType.STABLE_SWAP : SwapType.SWAP))
+              setSwapType((state) => (state === SwapType.SWAP ? SwapType.SWAP : null))
               replaceBrowserHistory('inputCurrency', null)
               replaceBrowserHistory('outputCurrency', null)
             }}
           >
-            {[t('Swap'), t('StableSwap')].map((content, idx) => (
+            {[t('Swap')].map((content, idx) => (
               <ButtonMenuItem
                 key={content}
                 style={{
+                  fontFamily:"myHeadingFont",
                   color: idx === swapTypeState ? theme.colors.text : theme.colors.textSubtle,
                   backgroundColor: idx === swapTypeState ? theme.card.background : theme.colors.input,
                 }}
